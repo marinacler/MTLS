@@ -1,4 +1,3 @@
-cd Desktop/
 mkdir projects
 cd projects/
 mkdir MTLSproject
