@@ -1,0 +1,19 @@
+filehandle=open('membrane-beta_2state.3line.txt', 'r')
+	#newfile=open(file_name + '_edited','w') 
+text=filehandle.read().splitlines()
+#print(text[1])
+x=0
+filehandle.close()
+data={}
+
+for line in text:
+     if line.startswith('>'):
+        line=line[1:] #to remove the > sign or also use line=line.replace('>','')
+        data[line]=  [text[x+1],text[x+2]]   #the ID is the key, the sequence and topology are the values fot that ID
+        #print([text[x+1],text[x+2]])
+        x=x+1  #counter to store the values in the corresponding key
+     else:
+        x=x+1  #counter to store the values in the corresponding key
+
+#print(data)
+
