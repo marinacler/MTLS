@@ -1,0 +1,6 @@
+#THIS IS THE PROJECT WITH MODULES
+
+#import parser_module THIS IS NOT WORKING, ASK ON MONDAY TO START PUTTING EVERYTHING IN MODULES
+
+
+print(parser_module.parse_fasta_topology('myexample.txt'))
