@@ -1,3 +1,4 @@
+#import parser_module
 import numpy as np
 import sklearn
 from sklearn import svm
@@ -62,14 +63,38 @@ for line in text:
 	else:
         	x=x+1  #counter to store the values in the corresponding key
 
+
+################################################################################
+### Opens the FASTA file and store each feature of the txt file into
+### the appropriate elements within a dictionary.
+################################################################################
+filehandle=open('examplefortesting.txt','r') 
+text=filehandle.read().splitlines()
+filehandle.close()
+x=0
+dataFASTA={}
+for line in text:
+	if line.startswith('>'):
+		line=line[1:] #also line=line.replace('>','')
+		sequence=[]  #text[x+1] is the protein sequence
+		for character in text[x+1]:  
+			sequence.append(seqbinary.get(character))
+         
+		dataFASTA[line]=  [sequence] #the ID is the key, the sequence is the value fot that ID, already converted to a binary code (aa residues)
+		x=x+1  #counter to store the values in the corresponding key
+	else:
+        	x=x+1  #counter to store the values in the corresponding key
+
 ################################################################################
 ### Creating input vectors for the SVM using a predefined sliding window
 ################################################################################
-for k in list(range(5,8 ,2)):  #1,32,2
-	slidwindow=k   #add int(sliding window size / 2) at both endings for flanking. 
+for k in list(range(7,8)):  #1,32,2
+	slidwindow=k   #add int(sliding window size / 2) at both endings for flanking.
+	protsfortesting=dataFASTA.keys()
 	protsfortraining=data.keys()  #these are all the proteins in my dataset
 	traininginput=[]   #list of seqs in binary that will be used as an input for SVM
 	trainingoutput=[]  #list of topologies in numbers (0,1) that will be used as input for SVM, although they should be the outputs (but we are working with a supervised learning machine method)
+	testinginput=[]
 	for proteins in protsfortraining:
 		# data.get(proteins)[0] is the seq in binary and data.get(proteins)[1] is the topology
 		flankinglist=[]
@@ -87,6 +112,19 @@ for k in list(range(5,8 ,2)):  #1,32,2
 			traininginput.append(flat_list)
 			trainingoutput.append(features[j-int(slidwindow/2)]) 
 
+	for proteins in protsfortesting:
+		flankinglist=[]
+		for i in range(int(slidwindow/2)):   #add int(sliding window size / 2) at the beggining for flanking. 
+			flankinglist=[flankingseq]+flankinglist
+		flankinglist=flankinglist+(dataFASTA.get(proteins)[0])
+		for i in range(int(slidwindow/2)):   #add int(sliding window size / 2) at the end for flanking. 
+			flankinglist=flankinglist+[flankingseq]
+
+		for j in range(int(slidwindow/2),(len(flankinglist)-int(slidwindow/2))):
+			slidingsequence=flankinglist[(j-int(slidwindow/2)):(j+int(slidwindow/2)+1)]
+			flat_list = [item for sublist in slidingsequence for item in sublist]
+			testinginput.append(flat_list)
+			
 ################################################################################
 ### Training a SVM with 5 cross-validation datasets
 ################################################################################
@@ -103,9 +141,10 @@ for k in list(range(5,8 ,2)):  #1,32,2
 	X_train, X_test, y_train, y_test = model_selection.train_test_split(traininginput, trainingoutput, test_size=0.20, train_size=0.8)
 	trial = svm.SVC(kernel='linear', C=1)	
 	trial.fit(X_train, y_train)
+	
 	y_predicted = trial.predict(X_test)
 	target_names = ['Class 0 == globular', 'Class 1 == beta barrel']
-	print('trial')
+	print('Trial with sliding window:')
 	print(slidwindow)
 	print(sklearn.metrics.classification_report(y_test, y_predicted, target_names=target_names))
 	# here the explanation of the results given: http://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_recall_fscore_support.html#sklearn.metrics.precision_recall_fscore_support
@@ -132,12 +171,15 @@ for k in list(range(5,8 ,2)):  #1,32,2
 ################################################################################
 	loaded_model = pickle.load(open(filename, 'rb'))   #loaded_model = joblib.load(filename)
 	result = loaded_model.score(X_test, y_test)    #result = loaded_model.score(X_test, Y_test)
-	print(result)  #result = loaded_model.score(X_test, Y_test)
+	#print(result)  #result = loaded_model.score(X_test, Y_test)
 
 ################################################################################
 ### Predicting features from another set
 ################################################################################
-	x_for_predict = open("myexample.txt") #loadScoringData("example.txt") Assuming same data format without target variable  (which is not the case, but I will parse the data to enter later)
-	y_predict = loaded_model.predict(x_for_predict)
-	plotResults(loaded_model, y_predict)# just a signature. 
+	print('Predicting your topology...')
+	prediction=clf.predict(testinginput)
+	print(prediction)
+	#x_for_predict = open("myexample.txt") #loadScoringData("example.txt") Assuming same data format without target variable  (which is not the case, but I will parse the data to enter later)
+	#y_predict = loaded_model.predict(testinginput)#(x_for_predict)
+	#plotResults(loaded_model, y_predict)# just a signature. 
 
