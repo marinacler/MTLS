@@ -1,8 +1,5 @@
-<<<<<<< HEAD:project.py
-=======
 #import parser_module
 import numpy as np
->>>>>>> 2959ef940710f30c745dd68c0c6f6c7141d010c1:project
 import sklearn
 from sklearn import svm
 from sklearn.svm import SVC
@@ -12,7 +9,6 @@ from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import cross_val_predict
 import pickle
 from sklearn.externals import joblib
-from collections import OrderedDict
 
 ################################################################################
 ### Defining the binary code for the aa residues
@@ -48,7 +44,7 @@ filehandle=open('example.txt','r') #('membrane-beta_2state.3line.txt', 'r')
 text=filehandle.read().splitlines()
 filehandle.close()
 x=0
-data=OrderedDict()
+data={}
 for line in text:
 	if line.startswith('>'):
 		line=line[1:] #also line=line.replace('>','')
@@ -76,11 +72,7 @@ filehandle=open('examplefortesting.txt','r')
 text=filehandle.read().splitlines()
 filehandle.close()
 x=0
-<<<<<<< HEAD:project.py
-dataFASTA=OrderedDict()
-=======
 dataFASTA={}
->>>>>>> 2959ef940710f30c745dd68c0c6f6c7141d010c1:project
 for line in text:
 	if line.startswith('>'):
 		line=line[1:] #also line=line.replace('>','')
@@ -92,11 +84,7 @@ for line in text:
 		x=x+1  #counter to store the values in the corresponding key
 	else:
         	x=x+1  #counter to store the values in the corresponding key
-<<<<<<< HEAD:project.py
-print (dataFASTA.keys())
-=======
 
->>>>>>> 2959ef940710f30c745dd68c0c6f6c7141d010c1:project
 ################################################################################
 ### Creating input vectors for the SVM using a predefined sliding window
 ################################################################################
@@ -189,24 +177,9 @@ for k in list(range(7,8)):  #1,32,2
 ### Predicting features from another set
 ################################################################################
 	print('Predicting your topology...')
-<<<<<<< HEAD:project.py
-	prediction=loaded_model.predict(testinginput)
-=======
 	prediction=clf.predict(testinginput)
->>>>>>> 2959ef940710f30c745dd68c0c6f6c7141d010c1:project
 	print(prediction)
 	#x_for_predict = open("myexample.txt") #loadScoringData("example.txt") Assuming same data format without target variable  (which is not the case, but I will parse the data to enter later)
 	#y_predict = loaded_model.predict(testinginput)#(x_for_predict)
 	#plotResults(loaded_model, y_predict)# just a signature. 
 
-<<<<<<< HEAD:project.py
-
-	output=[]
-	for element in prediction:
-		if element == 0:   #globular = g = 0 
-			output.append('g')
-		elif element == 1:   #beta = B = 1
-			output.append('B')
-	print(output)
-=======
->>>>>>> 2959ef940710f30c745dd68c0c6f6c7141d010c1:project
