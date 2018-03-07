@@ -1,6 +1,0 @@
->FIMD_ECOLI_observed_topology
-MSYLN
-ggBBB
->TSX_ECOLI_observed_topology
-MKK
-gBB

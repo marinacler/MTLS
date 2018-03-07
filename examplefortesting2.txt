@@ -1,6 +1,0 @@
->FIMD_ECOLI_observed_topology
-MSYLNL
->TSX_ECOLI_observed_topology
-MKKT
->Q8GNN6_ECOLX_observed_topology
-MIK
