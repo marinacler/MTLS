@@ -1,0 +1,359 @@
+PSIBLAST 2.2.31+
+
+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro A.
+Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J.
+Lipman (1997), "Gapped BLAST and PSI-BLAST: a new generation of
+protein database search programs", Nucleic Acids Res. 25:3389-3402.
+
+
+Reference for compositional score matrix adjustment: Stephen F.
+Altschul, John C. Wootton, E. Michael Gertz, Richa Agarwala,
+Aleksandr Morgulis, Alejandro A. Schaffer, and Yi-Kuo Yu (2005)
+"Protein database searches using compositionally adjusted
+substitution matrices", FEBS J. 272:5101-5109.
+
+
+Reference for composition-based statistics starting in round 2:
+Alejandro A. Schaffer, L. Aravind, Thomas L. Madden, Sergei
+Shavirin, John L. Spouge, Yuri I. Wolf, Eugene V. Koonin, and
+Stephen F. Altschul (2001), "Improving the accuracy of PSI-BLAST
+protein database searches with composition-based statistics and
+other refinements", Nucleic Acids Res. 29:2994-3005.
+
+
+
+Database: /scratch/uniref90.fasta
+           2,774,676 sequences; 999,999,380 total letters
+
+Results from round 1
+
+
+Query= Q8D0Z7_YERPE_observed_topology
+
+Length=194
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+  UniRef90_Q56957 Attachment invasion locus protein n=40 Tax=Yers...  370     2e-129
+  UniRef90_P16454 Attachment invasion locus protein n=23 Tax=Yers...  265     4e-88 
+  UniRef90_P0A919 Outer membrane protein X n=424 Tax=root TaxID=1...  123     6e-33 
+  UniRef90_P25253 Outer membrane protein X n=69 Tax=Bacteria TaxI...  116     4e-30 
+  UniRef90_P23988 Virulence membrane protein PagC n=152 Tax=Enter...  100     5e-24 
+  UniRef90_P03701 Outer membrane protein lom n=47 Tax=root TaxID=...  70.9    3e-13 
+
+
+> UniRef90_Q56957 Attachment invasion locus protein n=40 Tax=Yersinia 
+TaxID=444888 RepID=AIL_YERPS
+Length=182
+
+ Score = 370 bits (949),  Expect = 2e-129, Method: Compositional matrix adjust.
+ Identities = 181/182 (99%), Positives = 181/182 (99%), Gaps = 0/182 (0%)
+
+Query  13   MVFMNKTLLVSSLIACLSIASVNVYAEGESSISIGYAQSRVKEDGYKLDKNPRGFNLKYR  72
+            MVFMNKTLLVSSLIACLSIASVNVYAEGESSISIGYAQSRVKEDGYKLDKNPRGFNLKYR
+Sbjct  1    MVFMNKTLLVSSLIACLSIASVNVYAEGESSISIGYAQSRVKEDGYKLDKNPRGFNLKYR  60
+
+Query  73   YEFNNDWGVIGSFAQTRRGFEESVDGFKLIDGDFKYYSVTAGPVFRINEYVSLYGLLGAG  132
+            YEFNNDWGVIGSFAQTRRGFEESVDGFKLIDGDFKYYSVTAGPVFRINEYVSLYGLLGAG
+Sbjct  61   YEFNNDWGVIGSFAQTRRGFEESVDGFKLIDGDFKYYSVTAGPVFRINEYVSLYGLLGAG  120
+
+Query  133  HGKAKFSSIFGQSESRSKTSLAYGAGLQFNPHPNFVIDASYEYSKLDDVKVGTWMLGAGY  192
+            HGKAK SSIFGQSESRSKTSLAYGAGLQFNPHPNFVIDASYEYSKLDDVKVGTWMLGAGY
+Sbjct  121  HGKAKVSSIFGQSESRSKTSLAYGAGLQFNPHPNFVIDASYEYSKLDDVKVGTWMLGAGY  180
+
+Query  193  RF  194
+            RF
+Sbjct  181  RF  182
+
+
+> UniRef90_P16454 Attachment invasion locus protein n=23 Tax=Yersinia 
+TaxID=444888 RepID=AIL_YEREN
+Length=178
+
+ Score = 265 bits (677),  Expect = 4e-88, Method: Compositional matrix adjust.
+ Identities = 133/179 (74%), Positives = 148/179 (83%), Gaps = 1/179 (1%)
+
+Query  16   MNKTLLVSSLIACLSIASVNVYAEGESSISIGYAQSRVKEDGYKLDKNPRGFNLKYRYEF  75
+            M KTLL SSLIACLSIASVNVYA  ESSISIGYAQS VKE+GY LD +P+GFNLKYRYE 
+Sbjct  1    MKKTLLASSLIACLSIASVNVYAASESSISIGYAQSHVKENGYTLDNDPKGFNLKYRYEL  60
+
+Query  76   NNDWGVIGSFAQTRRGFEESVDGFKLIDGDFKYYSVTAGPVFRINEYVSLYGLLGAGHGK  135
+            +++WGVIGSFA T +G++      K   GD  YYSVT GP FRINEYVSLYGLLGA HGK
+Sbjct  61   DDNWGVIGSFAYTHQGYDFFYGSNKFGHGDVDYYSVTMGPSFRINEYVSLYGLLGAAHGK  120
+
+Query  136  AKFSSIFGQSESRSKTSLAYGAGLQFNPHPNFVIDASYEYSKLDDVKVGTWMLGAGYRF  194
+             K +S+F +S S SKTS+AYGAG+QFNP PNFVIDASYEYSKLD +KVGTWMLGAGYRF
+Sbjct  121  VK-ASVFDESISASKTSMAYGAGVQFNPLPNFVIDASYEYSKLDSIKVGTWMLGAGYRF  178
+
+
+> UniRef90_P0A919 Outer membrane protein X n=424 Tax=root TaxID=1 
+RepID=OMPX_ECO57
+Length=171
+
+ Score = 123 bits (309),  Expect = 6e-33, Method: Compositional matrix adjust.
+ Identities = 77/179 (43%), Positives = 104/179 (58%), Gaps = 21/179 (12%)
+
+Query  26   IACLS-IASVNVYAEGES-----SISIGYAQSRVKEDGYKLDKNPRGFNLKYRYEFNND-  78
+            IACLS +A+V  +  G S     +++ GYAQS  +    K+     GFNLKYRYE +N  
+Sbjct  4    IACLSALAAVLAFTAGTSVAATSTVTGGYAQSDAQGQMNKMG----GFNLKYRYEEDNSP  59
+
+Query  79   WGVIGSFAQTRRGFEESVDGFKLIDGDF---KYYSVTAGPVFRINEYVSLYGLLGAGHGK  135
+             GVIGSF  T +    S        GD+   +YY +TAGP +RIN++ S+YG++G G+GK
+Sbjct  60   LGVIGSFTYTEKSRTAS-------SGDYNKNQYYGITAGPAYRINDWASIYGVVGVGYGK  112
+
+Query  136  AKFSSIFGQSESRSKTSLAYGAGLQFNPHPNFVIDASYEYSKLDDVKVGTWMLGAGYRF  194
+             + +         S    +YGAGLQFNP  N  +D SYE S++  V VGTW+ G GYRF
+Sbjct  113  FQTTEYPTYKHDTSDYGFSYGAGLQFNPMENVALDFSYEQSRIRSVDVGTWIAGVGYRF  171
+
+
+> UniRef90_P25253 Outer membrane protein X n=69 Tax=Bacteria TaxID=2 
+RepID=OMPX_ENTCL
+Length=172
+
+ Score = 116 bits (290),  Expect = 4e-30, Method: Compositional matrix adjust.
+ Identities = 68/159 (43%), Positives = 98/159 (62%), Gaps = 18/159 (11%)
+
+Query  42   SSISIGYAQSRVKEDGYKLDKNPRGFNLKYRYEF-NNDWGVIGSFAQTRRGFEESVDGFK  100
+            S+++ GYAQS ++     +     GFNLKYRYE  NN  GVIGSF  T +   E      
+Sbjct  26   STVTGGYAQSDMQ----GVMNKTNGFNLKYRYEQDNNPLGVIGSFTYTEKDRTE------  75
+
+Query  101  LIDGDF---KYYSVTAGPVFRINEYVSLYGLLGAGHGKAKFSSIFG--QSESRSKTSLAY  155
+              +G +   +YY +TAGP +R+N++ S+YG++G G+GK + +   G  ++ S S    +Y
+Sbjct  76   --NGSYNKGQYYGITAGPAYRLNDWASIYGVVGVGYGKFQQTENQGLNRTASNSDYGFSY  133
+
+Query  156  GAGLQFNPHPNFVIDASYEYSKLDDVKVGTWMLGAGYRF  194
+            GAG+QFNP  N  +D SYE S++ +V VGTW+ G GYRF
+Sbjct  134  GAGMQFNPIENVALDFSYEQSRIRNVDVGTWIAGVGYRF  172
+
+
+> UniRef90_P23988 Virulence membrane protein PagC n=152 Tax=Enterobacteriaceae 
+TaxID=543 RepID=PAGC_SALTY
+Length=185
+
+ Score = 100 bits (249),  Expect = 5e-24, Method: Compositional matrix adjust.
+ Identities = 68/191 (36%), Positives = 98/191 (51%), Gaps = 21/191 (11%)
+
+Query  18   KTLLVSSLIACLSIASVNVYAEGESSISIGYAQSRVKEDGYKLDKNPRGFNLKYRYEFNN  77
+            K +++S+L+   S+  VNV     ++ S+GYAQS+V++      KN RG N+KYRYE ++
+Sbjct  2    KNIILSTLVITTSVLVVNVAQADTNAFSVGYAQSKVQDF-----KNIRGVNVKYRYEDDS  56
+
+Query  78   DWGVIGSFA------QTRRGFEESVDGFKLIDG-DFKYYSVTAGPVFRINEYVSLYGLLG  130
+                I S +      Q     E   +G    D  + KY S+  GP +R+++  SLY L G
+Sbjct  57   PVSFISSLSYLYGDRQASGSVEP--EGIHYHDKFEVKYGSLMVGPAYRLSDNFSLYALAG  114
+
+Query  131  AGHGKAKFSS-------IFGQSESRSKTSLAYGAGLQFNPHPNFVIDASYEYSKLDDVKV  183
+             G  KA F          F    S  KT  A+GAG+Q NP  N V+D  YE S +   K+
+Sbjct  115  VGTVKATFKEHSTQDGDSFSNKISSRKTGFAWGAGVQMNPLENIVVDVGYEGSNISSTKI  174
+
+Query  184  GTWMLGAGYRF  194
+              + +G GYRF
+Sbjct  175  NGFNVGVGYRF  185
+
+
+> UniRef90_P03701 Outer membrane protein lom n=47 Tax=root TaxID=1 
+RepID=VLOM_LAMBD
+Length=206
+
+ Score = 70.9 bits (172),  Expect = 3e-13, Method: Compositional matrix adjust.
+ Identities = 47/156 (30%), Positives = 73/156 (47%), Gaps = 31/156 (20%)
+
+Query  65   RGFNLKYRYEFNNDWGVIGSFAQTRRGFEESVDGFKLIDGD---------FKYYSVTAGP  115
+            +G N+KYRYE  +  GV+ S      GF  S     ++ G+          +Y SV AGP
+Sbjct  56   KGINVKYRYELTDSVGVMASL-----GFAASKKSSTVMTGEDTFHYESLRGRYVSVMAGP  110
+
+Query  116  VFRINEYVSLYGLLGAGH-----------------GKAKFSSIFGQSESRSKTSLAYGAG  158
+            V +I++ VS Y + G  H                 G  K ++      +   TS+A+ AG
+Sbjct  111  VLQISKQVSAYAMAGVAHSRWSGSTMDYRKTEITPGYMKETTTARDESAMRHTSVAWSAG  170
+
+Query  159  LQFNPHPNFVIDASYEYSKLDDVKVGTWMLGAGYRF  194
+            +Q NP  + V+D +YE S   D +   +++G GY+F
+Sbjct  171  IQINPAASVVVDIAYEGSGSGDWRTDGFIVGVGYKF  206
+
+
+
+Lambda      K        H        a         alpha
+   0.320    0.138    0.412    0.792     4.96 
+
+Gapped
+Lambda      K        H        a         alpha    sigma
+   0.267   0.0410    0.140     1.90     42.6     43.6 
+
+Effective search space used: 47627201376
+Results from round 2
+
+
+Query= Q8D0Z7_YERPE_observed_topology
+
+Length=194
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+Sequences used in model and found again:
+
+  UniRef90_Q56957 Attachment invasion locus protein n=40 Tax=Yers...  282     7e-95
+  UniRef90_P16454 Attachment invasion locus protein n=23 Tax=Yers...  250     3e-82
+  UniRef90_P23988 Virulence membrane protein PagC n=152 Tax=Enter...  196     5e-61
+  UniRef90_P0A919 Outer membrane protein X n=424 Tax=root TaxID=1...  189     2e-58
+  UniRef90_P25253 Outer membrane protein X n=69 Tax=Bacteria TaxI...  179     9e-55
+  UniRef90_P03701 Outer membrane protein lom n=47 Tax=root TaxID=...  144     2e-40
+
+Sequences not found previously or not previously below threshold:
+
+
+
+> UniRef90_Q56957 Attachment invasion locus protein n=40 Tax=Yersinia 
+TaxID=444888 RepID=AIL_YERPS
+Length=182
+
+ Score = 282 bits (722),  Expect = 7e-95, Method: Composition-based stats.
+ Identities = 181/182 (99%), Positives = 181/182 (99%), Gaps = 0/182 (0%)
+
+Query  13   MVFMNKTLLVSSLIACLSIASVNVYAEGESSISIGYAQSRVKEDGYKLDKNPRGFNLKYR  72
+            MVFMNKTLLVSSLIACLSIASVNVYAEGESSISIGYAQSRVKEDGYKLDKNPRGFNLKYR
+Sbjct  1    MVFMNKTLLVSSLIACLSIASVNVYAEGESSISIGYAQSRVKEDGYKLDKNPRGFNLKYR  60
+
+Query  73   YEFNNDWGVIGSFAQTRRGFEESVDGFKLIDGDFKYYSVTAGPVFRINEYVSLYGLLGAG  132
+            YEFNNDWGVIGSFAQTRRGFEESVDGFKLIDGDFKYYSVTAGPVFRINEYVSLYGLLGAG
+Sbjct  61   YEFNNDWGVIGSFAQTRRGFEESVDGFKLIDGDFKYYSVTAGPVFRINEYVSLYGLLGAG  120
+
+Query  133  HGKAKFSSIFGQSESRSKTSLAYGAGLQFNPHPNFVIDASYEYSKLDDVKVGTWMLGAGY  192
+            HGKAK SSIFGQSESRSKTSLAYGAGLQFNPHPNFVIDASYEYSKLDDVKVGTWMLGAGY
+Sbjct  121  HGKAKVSSIFGQSESRSKTSLAYGAGLQFNPHPNFVIDASYEYSKLDDVKVGTWMLGAGY  180
+
+Query  193  RF  194
+            RF
+Sbjct  181  RF  182
+
+
+> UniRef90_P16454 Attachment invasion locus protein n=23 Tax=Yersinia 
+TaxID=444888 RepID=AIL_YEREN
+Length=178
+
+ Score = 250 bits (638),  Expect = 3e-82, Method: Composition-based stats.
+ Identities = 133/179 (74%), Positives = 148/179 (83%), Gaps = 1/179 (1%)
+
+Query  16   MNKTLLVSSLIACLSIASVNVYAEGESSISIGYAQSRVKEDGYKLDKNPRGFNLKYRYEF  75
+            M KTLL SSLIACLSIASVNVYA  ESSISIGYAQS VKE+GY LD +P+GFNLKYRYE 
+Sbjct  1    MKKTLLASSLIACLSIASVNVYAASESSISIGYAQSHVKENGYTLDNDPKGFNLKYRYEL  60
+
+Query  76   NNDWGVIGSFAQTRRGFEESVDGFKLIDGDFKYYSVTAGPVFRINEYVSLYGLLGAGHGK  135
+            +++WGVIGSFA T +G++      K   GD  YYSVT GP FRINEYVSLYGLLGA HGK
+Sbjct  61   DDNWGVIGSFAYTHQGYDFFYGSNKFGHGDVDYYSVTMGPSFRINEYVSLYGLLGAAHGK  120
+
+Query  136  AKFSSIFGQSESRSKTSLAYGAGLQFNPHPNFVIDASYEYSKLDDVKVGTWMLGAGYRF  194
+             K +S+F +S S SKTS+AYGAG+QFNP PNFVIDASYEYSKLD +KVGTWMLGAGYRF
+Sbjct  121  VK-ASVFDESISASKTSMAYGAGVQFNPLPNFVIDASYEYSKLDSIKVGTWMLGAGYRF  178
+
+
+> UniRef90_P23988 Virulence membrane protein PagC n=152 Tax=Enterobacteriaceae 
+TaxID=543 RepID=PAGC_SALTY
+Length=185
+
+ Score = 196 bits (498),  Expect = 5e-61, Method: Composition-based stats.
+ Identities = 67/189 (35%), Positives = 98/189 (52%), Gaps = 17/189 (9%)
+
+Query  18   KTLLVSSLIACLSIASVNVYAEGESSISIGYAQSRVKEDGYKLDKNPRGFNLKYRYEFNN  77
+            K +++S+L+   S+  VNV     ++ S+GYAQS+V++      KN RG N+KYRYE ++
+Sbjct  2    KNIILSTLVITTSVLVVNVAQADTNAFSVGYAQSKVQDF-----KNIRGVNVKYRYEDDS  56
+
+Query  78   DWGVIGSFAQTRRGFEES----VDGFKLIDG-DFKYYSVTAGPVFRINEYVSLYGLLGAG  132
+                I S +      + S     +G    D  + KY S+  GP +R+++  SLY L G G
+Sbjct  57   PVSFISSLSYLYGDRQASGSVEPEGIHYHDKFEVKYGSLMVGPAYRLSDNFSLYALAGVG  116
+
+Query  133  HGKAKFSS-------IFGQSESRSKTSLAYGAGLQFNPHPNFVIDASYEYSKLDDVKVGT  185
+              KA F          F    S  KT  A+GAG+Q NP  N V+D  YE S +   K+  
+Sbjct  117  TVKATFKEHSTQDGDSFSNKISSRKTGFAWGAGVQMNPLENIVVDVGYEGSNISSTKING  176
+
+Query  186  WMLGAGYRF  194
+            + +G GYRF
+Sbjct  177  FNVGVGYRF  185
+
+
+> UniRef90_P0A919 Outer membrane protein X n=424 Tax=root TaxID=1 
+RepID=OMPX_ECO57
+Length=171
+
+ Score = 189 bits (479),  Expect = 2e-58, Method: Composition-based stats.
+ Identities = 75/176 (43%), Positives = 102/176 (58%), Gaps = 15/176 (9%)
+
+Query  26   IACLS-IASVNVYAEGES-----SISIGYAQSRVKEDGYKLDKNPRGFNLKYRYEFNN-D  78
+            IACLS +A+V  +  G S     +++ GYAQS  +    K+     GFNLKYRYE +N  
+Sbjct  4    IACLSALAAVLAFTAGTSVAATSTVTGGYAQSDAQGQMNKMG----GFNLKYRYEEDNSP  59
+
+Query  79   WGVIGSFAQTRRGFEESVDGFKLIDGDFKYYSVTAGPVFRINEYVSLYGLLGAGHGKAKF  138
+             GVIGSF  T +    S   +       +YY +TAGP +RIN++ S+YG++G G+GK + 
+Sbjct  60   LGVIGSFTYTEKSRTASSGDYN----KNQYYGITAGPAYRINDWASIYGVVGVGYGKFQT  115
+
+Query  139  SSIFGQSESRSKTSLAYGAGLQFNPHPNFVIDASYEYSKLDDVKVGTWMLGAGYRF  194
+            +         S    +YGAGLQFNP  N  +D SYE S++  V VGTW+ G GYRF
+Sbjct  116  TEYPTYKHDTSDYGFSYGAGLQFNPMENVALDFSYEQSRIRSVDVGTWIAGVGYRF  171
+
+
+> UniRef90_P25253 Outer membrane protein X n=69 Tax=Bacteria TaxID=2 
+RepID=OMPX_ENTCL
+Length=172
+
+ Score = 179 bits (455),  Expect = 9e-55, Method: Composition-based stats.
+ Identities = 68/161 (42%), Positives = 97/161 (60%), Gaps = 12/161 (7%)
+
+Query  37   YAEGESSISIGYAQSRVKEDGYKLDKNPRGFNLKYRYE-FNNDWGVIGSFAQTRRGFEES  95
+                 S+++ GYAQS ++     +     GFNLKYRYE  NN  GVIGSF  T +   E+
+Sbjct  21   AVAATSTVTGGYAQSDMQ----GVMNKTNGFNLKYRYEQDNNPLGVIGSFTYTEKDRTEN  76
+
+Query  96   VDGFKLIDGDFKYYSVTAGPVFRINEYVSLYGLLGAGHGKAKFSSIFG--QSESRSKTSL  153
+                K      +YY +TAGP +R+N++ S+YG++G G+GK + +   G  ++ S S    
+Sbjct  77   GSYNK-----GQYYGITAGPAYRLNDWASIYGVVGVGYGKFQQTENQGLNRTASNSDYGF  131
+
+Query  154  AYGAGLQFNPHPNFVIDASYEYSKLDDVKVGTWMLGAGYRF  194
+            +YGAG+QFNP  N  +D SYE S++ +V VGTW+ G GYRF
+Sbjct  132  SYGAGMQFNPIENVALDFSYEQSRIRNVDVGTWIAGVGYRF  172
+
+
+> UniRef90_P03701 Outer membrane protein lom n=47 Tax=root TaxID=1 
+RepID=VLOM_LAMBD
+Length=206
+
+ Score = 144 bits (362),  Expect = 2e-40, Method: Composition-based stats.
+ Identities = 52/189 (28%), Positives = 83/189 (44%), Gaps = 36/189 (19%)
+
+Query  37   YAEGESSISIGYAQSR-----VKEDGYKLDKNPRGFNLKYRYEFNNDWGVIGSFAQTRRG  91
+               G  + ++GY Q +         G     + +G N+KYRYE  +  GV+ S      G
+Sbjct  23   AEGGHGTFTVGYFQVKPGTLPSLSGGDTGVSHLKGINVKYRYELTDSVGVMASL-----G  77
+
+Query  92   FEESVDGFKLIDGD---------FKYYSVTAGPVFRINEYVSLYGLLGAGH---------  133
+            F  S     ++ G+          +Y SV AGPV +I++ VS Y + G  H         
+Sbjct  78   FAASKKSSTVMTGEDTFHYESLRGRYVSVMAGPVLQISKQVSAYAMAGVAHSRWSGSTMD  137
+
+Query  134  --------GKAKFSSIFGQSESRSKTSLAYGAGLQFNPHPNFVIDASYEYSKLDDVKVGT  185
+                    G  K ++      +   TS+A+ AG+Q NP  + V+D +YE S   D +   
+Sbjct  138  YRKTEITPGYMKETTTARDESAMRHTSVAWSAGIQINPAASVVVDIAYEGSGSGDWRTDG  197
+
+Query  186  WMLGAGYRF  194
+            +++G GY+F
+Sbjct  198  FIVGVGYKF  206
+
+
+
+Lambda      K        H        a         alpha
+   0.310    0.129    0.340    0.792     4.96 
+
+Gapped
+Lambda      K        H        a         alpha    sigma
+   0.267   0.0396    0.140     1.90     42.6     43.6 
+
+Effective search space used: 47627201376
+
+Search has CONVERGED!
+
+
+  Database: /scratch/uniref90.fasta
+    Posted date:  Jan 22, 2018  4:02 PM
+  Number of letters in database: 999,999,380
+  Number of sequences in database:  2,774,676
+
+
+
+Matrix: BLOSUM62
+Gap Penalties: Existence: 11, Extension: 1
+Neighboring words threshold: 11
+Window for multiple hits: 40

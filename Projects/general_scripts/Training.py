@@ -16,14 +16,15 @@ parsed_dictionary_training=prs.parse_fasta_topology('../../datasets/example.txt'
 # ('../../datasets/membrane-beta_2state.3line.txt')
 print('HALF DATASET')
 
-for m in [x * 0.1 for x in range(1, 11)]:
+listcvalues=[0.5,1,10,100]
+for m in listcvalues:
 	c=m
 	print('C VARIABLE EQUAL TO: ',c)
 	slidwindow=35
 #for slidwindow in range(5,50,2):
 	traininginput, trainingoutput = prs.input_for_training(parsed_dictionary_training,slidwindow)
 	
-	for value in range(-10,1):
+	for value in range(-10,0):
 	    gammavalue=10**value
 	    print('GAMMA VARIABLE EQUAL TO: ',gammavalue)
 ################################################################################
@@ -55,39 +56,6 @@ for m in [x * 0.1 for x in range(1, 11)]:
 	    clf5=train.crossvalidation(traininginput, trainingoutput, clf4, slidwindow)
 	    print('')
 	    print('')
-################################################################################
-### This has to be deleted later
-################################################################################
-
-for m in range(1, 3):
-	c=10**m
-	print('C VARIABLE EQUAL TO: ',c)
-	slidwindow=35
-#for slidwindow in range(5,50,2):
-	traininginput, trainingoutput = prs.input_for_training(parsed_dictionary_training,slidwindow)
-	
-	for value in range(-8,1):
-	    gammavalue=10**value
-	    #clf0 = svm.SVC(kernel='linear', C=c, cache_size=4000)
-	    #print('LINEAR KERNEL TYPE')
-	    #clf=train.crossvalidation(traininginput, trainingoutput, clf0, slidwindow)
-	    #print('')
-	    #print('')
-	    clf6 = svm.SVC(kernel='rbf', C=c, cache_size=4000)
-	    print('RBF KERNEL TYPE')
-	    clf1=train.crossvalidation(traininginput, trainingoutput, clf6, slidwindow, gamma=gammavalue)
-	    print('')
-	    print('')
-	    clf2 = svm.SVC(kernel='poly', C=c, cache_size=4000)
-	    print('POLYNOMIAL KERNEL TYPE')
-	    clf3=train.crossvalidation(traininginput, trainingoutput, clf2, slidwindow, gamma=gammavalue)
-	    print('')
-	    print('')
-	    clf4 = svm.SVC(kernel='sigmoid', C=c, cache_size=4000)
-	    print('SIGMOID KERNEL TYPE')
-	    clf5=train.crossvalidation(traininginput, trainingoutput, clf4, slidwindow, gamma=gammavalue)
-	    print('')
-	    print('')	
 
 ################################################################################
 ### SAVE THE TRAINED MODEL

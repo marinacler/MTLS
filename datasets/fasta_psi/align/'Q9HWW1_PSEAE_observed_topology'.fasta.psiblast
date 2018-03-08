@@ -1,0 +1,734 @@
+PSIBLAST 2.2.31+
+
+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro A.
+Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J.
+Lipman (1997), "Gapped BLAST and PSI-BLAST: a new generation of
+protein database search programs", Nucleic Acids Res. 25:3389-3402.
+
+
+Reference for compositional score matrix adjustment: Stephen F.
+Altschul, John C. Wootton, E. Michael Gertz, Richa Agarwala,
+Aleksandr Morgulis, Alejandro A. Schaffer, and Yi-Kuo Yu (2005)
+"Protein database searches using compositionally adjusted
+substitution matrices", FEBS J. 272:5101-5109.
+
+
+Reference for composition-based statistics starting in round 2:
+Alejandro A. Schaffer, L. Aravind, Thomas L. Madden, Sergei
+Shavirin, John L. Spouge, Yuri I. Wolf, Eugene V. Koonin, and
+Stephen F. Altschul (2001), "Improving the accuracy of PSI-BLAST
+protein database searches with composition-based statistics and
+other refinements", Nucleic Acids Res. 29:2994-3005.
+
+
+
+Database: /scratch/uniref90.fasta
+           2,774,676 sequences; 999,999,380 total letters
+
+Results from round 1
+
+
+Query= Q9HWW1_PSEAE_observed_topology
+
+Length=232
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+  UniRef90_P17266 Outer membrane protein W n=58 Tax=Vibrio TaxID=...  196     6e-60
+  UniRef90_P0A915 Outer membrane protein W n=450 Tax=root TaxID=1...  175     7e-52
+  UniRef90_Q8ZP50 Outer membrane protein W n=180 Tax=Enterobacter...  171     2e-50
+  UniRef90_P55561 Uncharacterized outer-membrane protein y4mB n=5...  67.0    1e-11
+  UniRef90_P0A145 Dibenzothiophene metabolism operon protein PahQ...  61.6    9e-10
+  UniRef90_Q00595 Outer membrane protein AlkL n=4 Tax=Pseudomonas...  59.7    5e-09
+  UniRef90_Q9ZE71 Putative outer membrane protein RP075 n=5 Tax=t...  45.4    7e-04
+
+
+> UniRef90_P17266 Outer membrane protein W n=58 Tax=Vibrio TaxID=662 
+RepID=OMPW_VIBCH
+Length=217
+
+ Score = 196 bits (498),  Expect = 6e-60, Method: Compositional matrix adjust.
+ Identities = 99/224 (44%), Positives = 136/224 (61%), Gaps = 10/224 (4%)
+
+Query  9    SLLALTVASPFAAADIQGHKAGDFIIRGGFATVDPDDSSSDIKLDGAKQRGTKATVDSDT  68
+            ++  L V +  ++A +  H+ GDFI+R G A+V P+DSS     D      ++  V+S+T
+Sbjct  4    TICGLAVLAALSSAPVFAHQEGDFIVRAGIASVVPNDSS-----DKVLNTQSELAVNSNT  58
+
+Query  69   QLGLTFTYMFADKWGVELVAATPFNHQVDVKGLGPGLDGKLADIKQLPPTLLLQYYPMGG  128
+            QLGLT  YMF D    E++AATPF+H++   G   G  G + + K LPPT ++QYY  G 
+Sbjct  59   QLGLTLGYMFTDNISFEVLAATPFSHKISTSGGELGSLGDIGETKHLPPTFMVQYY-FGE  117
+
+Query  129  TNSAFQPYGGLGVNYTTFFDEDLASNRKAQGFSSMKLQDSWGLAGELGFDYMLNEHALFN  188
+             NS F+PY G G+NYTTFFDE         G S +KL DSWGLA  +GFDYMLN+    N
+Sbjct  118  ANSTFRPYVGAGLNYTTFFDESFNGTGTNAGLSDLKLDDSWGLAANVGFDYMLNDSWFLN  177
+
+Query  189  MAVWYMDIDTKASINGPSALGVNKTKVDVDVDPWVYMIGFGYKF  232
+             +VWY +I+T A+       G +    DV+++PWV+MI  GYKF
+Sbjct  178  ASVWYANIETTATYKA----GADAKSTDVEINPWVFMIAGGYKF  217
+
+
+> UniRef90_P0A915 Outer membrane protein W n=450 Tax=root TaxID=1 
+RepID=OMPW_ECOLI
+Length=212
+
+ Score = 175 bits (443),  Expect = 7e-52, Method: Compositional matrix adjust.
+ Identities = 103/235 (44%), Positives = 138/235 (59%), Gaps = 26/235 (11%)
+
+Query  1    MRKSWLTASLLALTV---ASPFAAADIQGHKAGDFIIRGGFATVDPDDSSSDIKLDGAKQ  57
+            M+K  LT + LA+T     S FA      H+AG+F +R G ATV P + +      G   
+Sbjct  1    MKK--LTVAALAVTTLLSGSAFA------HEAGEFFMRAGSATVRPTEGAG-----GTLG  47
+
+Query  58   RGTKATVDSDTQLGLTFTYMFADKWGVELVAATPFNHQVDVKGLGPGLDGKLADIKQLPP  117
+                 +V ++TQLGLTFTYM  D  GVEL+AATPF H++  +       G +A +  LPP
+Sbjct  48   SLGGFSVTNNTQLGLTFTYMATDNIGVELLAATPFRHKIGTRA-----TGDIATVHHLPP  102
+
+Query  118  TLLLQYYPMGGTNSAFQPYGGLGVNYTTFFDEDLASNRKAQGFSSMKLQDSWGLAGELGF  177
+            TL+ Q+Y  G  +S F+PY G G+NYTTFFD     + K  G S + L+DSWG AG++G 
+Sbjct  103  TLMAQWY-FGDASSKFRPYVGAGINYTTFFDNGFNDHGKEAGLSDLSLKDSWGAAGQVGV  161
+
+Query  178  DYMLNEHALFNMAVWYMDIDTKASINGPSALGVNKTKVDVDVDPWVYMIGFGYKF  232
+            DY++N   L NM+VWYMDIDT A+      LG  +    V +DPWV+M   GY+F
+Sbjct  162  DYLINRDWLVNMSVWYMDIDTTANYK----LGGAQQHDSVRLDPWVFMFSAGYRF  212
+
+
+> UniRef90_Q8ZP50 Outer membrane protein W n=180 Tax=Enterobacteriaceae 
+TaxID=543 RepID=OMPW_SALTY
+Length=212
+
+ Score = 171 bits (434),  Expect = 2e-50, Method: Compositional matrix adjust.
+ Identities = 104/235 (44%), Positives = 136/235 (58%), Gaps = 26/235 (11%)
+
+Query  1    MRKSWLTASLLALTV---ASPFAAADIQGHKAGDFIIRGGFATVDPDDSSSDIKLDGAKQ  57
+            M+K   T + LALT     S FA      H+AG+F +R G ATV P + +      G   
+Sbjct  1    MKK--FTVAALALTTLLSGSAFA------HEAGEFFMRAGPATVRPTEGAG-----GTLG  47
+
+Query  58   RGTKATVDSDTQLGLTFTYMFADKWGVELVAATPFNHQVDVKGLGPGLDGKLADIKQLPP  117
+                  V ++TQLGLTFTYM  D  GVEL+AATPF H+V     G G  G +A +  LPP
+Sbjct  48   HLNGFDVSNNTQLGLTFTYMATDNIGVELLAATPFRHKV-----GTGATGDIATVHLLPP  102
+
+Query  118  TLLLQYYPMGGTNSAFQPYGGLGVNYTTFFDEDLASNRKAQGFSSMKLQDSWGLAGELGF  177
+            TL+ Q+Y  G ++S  +PY G+GVNYTTFFD D   N K  G S +  +DSWG AG++G 
+Sbjct  103  TLMAQWY-FGDSSSKVRPYVGVGVNYTTFFDNDFNDNGKNAGLSDLSFKDSWGAAGQVGV  161
+
+Query  178  DYMLNEHALFNMAVWYMDIDTKASINGPSALGVNKTKVDVDVDPWVYMIGFGYKF  232
+            DY++N   L   +VWYMDIDT A+      +G  +    V +DPWV+M   GY+F
+Sbjct  162  DYLINRDWLIGASVWYMDIDTTANYK----MGGVQHHDSVRLDPWVFMFSAGYRF  212
+
+
+> UniRef90_P55561 Uncharacterized outer-membrane protein y4mB n=5 
+Tax=Sinorhizobium/Ensifer group TaxID=227292 RepID=Y4MB_SINFN
+Length=229
+
+ Score = 67.0 bits (162),  Expect = 1e-11, Method: Compositional matrix adjust.
+ Identities = 51/169 (30%), Positives = 78/169 (46%), Gaps = 30/169 (18%)
+
+Query  72   LTFTYMFADKWGVELVAATPFNHQVDVKGLGPGLDGKLADIKQLPPTLLLQYYPMGGTNS  131
+            L  +Y F D    EL+  T + +  +V  +G      +     LPPTL LQY+       
+Sbjct  83   LDISYFFTDNIAAELILGTTYANIKEVGAVGV----PVGKAWLLPPTLTLQYHFT--DFG  136
+
+Query  132  AFQPYGGLGVNYTTFFDEDLASNRKAQGFSSMKLQDSWGLAGELGFDYMLNEHALFNMAV  191
+            AF+PY G G+NY+ F+++      +  GF  + + +  G A ++GFDYM++EH   N  V
+Sbjct  137  AFKPYLGAGINYSLFYNQS-----EKAGFHDLDVDNHVGAALQVGFDYMVDEHWGVNFDV  191
+
+Query  192  --------WYMDIDTKASINGPSALGVNKTKVDVDVDPWVYMIGFGYKF  232
+                    W  D D    ++G       K K    +DPW+   G  Y+F
+Sbjct  192  KKIFLETEWKADHDVLGPLSG-------KAK----IDPWLIGAGVTYRF  229
+
+
+> UniRef90_P0A145 Dibenzothiophene metabolism operon protein PahQ 
+n=14 Tax=root TaxID=1 RepID=NAHQ_PSEAI
+Length=211
+
+ Score = 61.6 bits (148),  Expect = 9e-10, Method: Compositional matrix adjust.
+ Identities = 51/192 (27%), Positives = 77/192 (40%), Gaps = 22/192 (11%)
+
+Query  45   DSSSDIKLDGAKQRGTKATVDSDTQLGLTFTYMFADKWGVELVAATPFNHQVDVKGLGPG  104
+            D+S+ + L+G +  G  A    +  L   F Y   D+W V  +   P   +V   G  PG
+Sbjct  38   DASAKVYLNGQRVPGGSADASDNNALTFDFGYAINDQWNVRAIVGIPPTTKVTGAGTLPG  97
+
+Query  105  LDGKLADIKQLPPTLLLQY-YPMGGTNSAFQPYGGLGVNYTTFFDEDLASNRKAQGFSSM  163
+            +  +L  I   P  L L Y  P  G     +P+ G GVNYT  F+       +     S 
+Sbjct  98   I--QLGKITYAPTVLTLNYNLPALG---PVRPHIGAGVNYTRIFES------RDANLKSF  146
+
+Query  164  KLQDSWGLAGELGFDYMLNEHALFNMAVWYMDIDTKA---SINGPSALGVNKTKVDVDVD  220
+                +W  A  +G D  +N         W++ ID +      +    LG  + K  V +D
+Sbjct  147  DADHAWSPALHVGADIDVNRG-------WFVSIDIRKLYLKTDASGYLGPQEAKARVTLD  199
+
+Query  221  PWVYMIGFGYKF  232
+            P +  I  G +F
+Sbjct  200  PLLTSIAIGRQF  211
+
+
+> UniRef90_Q00595 Outer membrane protein AlkL n=4 Tax=Pseudomonas 
+TaxID=286 RepID=ALKL_PSEOL
+Length=230
+
+ Score = 59.7 bits (143),  Expect = 5e-09, Method: Compositional matrix adjust.
+ Identities = 50/215 (23%), Positives = 85/215 (40%), Gaps = 21/215 (10%)
+
+Query  22   ADIQGHKAGDFIIRGGFATVDPDDSSSDIKLDGAKQRGTKATVDSDTQLGLTFTYMFADK  81
+            A   G+  GD++    F+ V   +   D+ + G        ++ +DT L     Y  +  
+Sbjct  33   AKSAGYNQGDWVASFNFSKVYVGEELGDLNVGGGALPNADVSIGNDTTLTFDIAYFVSSN  92
+
+Query  82   WGVELVAATP----FNHQVDVKGLGPGLDGKLADIKQLPPTLLLQYYPMGGTNSAFQPYG  137
+              V+     P    F  +  +  L     G+++++   P  L LQY+    +     PY 
+Sbjct  93   IAVDFFVGVPARAKFQGEKSISSL-----GRVSEVDYGPAILSLQYHY--DSFERLYPYV  145
+
+Query  138  GLGVNYTTFFDEDLASNRKAQGFSSMKLQDSWGLAGELGFDYMLNEHALFNMAVWYMDID  197
+            G+GV    FFD      +     SS  ++D W  A ++G  Y L    + N  V Y+   
+Sbjct  146  GVGVGRVLFFD------KTDGALSSFDIKDKWAPAFQVGLRYDLGNSWMLNSDVRYIPFK  199
+
+Query  198  TKASINGPSALGVNKTKVDVDVDPWVYMIGFGYKF  232
+            T  +      LG       ++VDP++  +G  Y F
+Sbjct  200  TDVT----GTLGPVPVSTKIEVDPFILSLGASYVF  230
+
+
+> UniRef90_Q9ZE71 Putative outer membrane protein RP075 n=5 Tax=typhus 
+group TaxID=114292 RepID=Y075_RICPR
+Length=243
+
+ Score = 45.4 bits (106),  Expect = 7e-04, Method: Compositional matrix adjust.
+ Identities = 38/148 (26%), Positives = 66/148 (45%), Gaps = 22/148 (15%)
+
+Query  87   VAATPFNHQVDVKGLGPGLDGKLADIKQLPPTLLLQYY--PMGGTNSAFQPYGGLGVNYT  144
+            +AA   N+ VD   LG     K   I  +P TL  Q++  P GG     +PY G+G + +
+Sbjct  116  LAAVAHNYGVDNVKLG-----KHKPIYMIPATLTGQFHIAPYGG----IRPYIGIGYHGS  166
+
+Query  145  TFFDEDLASNRKAQGFSSMKLQDSWGLAGELGFDYMLNEHALFNMAVWYMDIDTKASING  204
+                +           + +K+++ + + G++G D+   +  L NM V    +  K     
+Sbjct  167  YMLTQA----------TGLKIRNGYNIVGQIGVDFYAKDDTLINMDVRQFFLKPKLEYK-  215
+
+Query  205  PSALGVNKTKVDVDVDPWVYMIGFGYKF  232
+            P+ +G  K    V ++P +  IG G+ F
+Sbjct  216  PNLVGNKKVTSKVKLNPLIVSIGIGFTF  243
+
+
+
+Lambda      K        H        a         alpha
+   0.319    0.137    0.418    0.792     4.96 
+
+Gapped
+Lambda      K        H        a         alpha    sigma
+   0.267   0.0410    0.140     1.90     42.6     43.6 
+
+Effective search space used: 70841472048
+Results from round 2
+
+
+Query= Q9HWW1_PSEAE_observed_topology
+
+Length=232
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+Sequences used in model and found again:
+
+  UniRef90_P17266 Outer membrane protein W n=58 Tax=Vibrio TaxID=...  247     6e-80
+  UniRef90_P0A915 Outer membrane protein W n=450 Tax=root TaxID=1...  244     8e-79
+  UniRef90_Q8ZP50 Outer membrane protein W n=180 Tax=Enterobacter...  243     1e-78
+  UniRef90_Q00595 Outer membrane protein AlkL n=4 Tax=Pseudomonas...  196     1e-59
+  UniRef90_P0A145 Dibenzothiophene metabolism operon protein PahQ...  180     6e-54
+  UniRef90_P55561 Uncharacterized outer-membrane protein y4mB n=5...  153     3e-43
+  UniRef90_Q9ZE71 Putative outer membrane protein RP075 n=5 Tax=t...  121     8e-31
+
+Sequences not found previously or not previously below threshold:
+
+  UniRef90_Q92JG2 Putative outer membrane protein RC0105 n=43 Tax...  112     1e-27
+  UniRef90_Q1RKL1 Putative outer membrane protein RBE_0022 n=6 Ta...  96.0    1e-21
+  UniRef90_Q51946 Dibenzothiophene metabolism operon protein NahQ...  53.7    7e-08
+
+
+> UniRef90_P17266 Outer membrane protein W n=58 Tax=Vibrio TaxID=662 
+RepID=OMPW_VIBCH
+Length=217
+
+ Score = 247 bits (630),  Expect = 6e-80, Method: Composition-based stats.
+ Identities = 99/224 (44%), Positives = 136/224 (61%), Gaps = 10/224 (4%)
+
+Query  9    SLLALTVASPFAAADIQGHKAGDFIIRGGFATVDPDDSSSDIKLDGAKQRGTKATVDSDT  68
+            ++  L V +  ++A +  H+ GDFI+R G A+V P+DSS     D      ++  V+S+T
+Sbjct  4    TICGLAVLAALSSAPVFAHQEGDFIVRAGIASVVPNDSS-----DKVLNTQSELAVNSNT  58
+
+Query  69   QLGLTFTYMFADKWGVELVAATPFNHQVDVKGLGPGLDGKLADIKQLPPTLLLQYYPMGG  128
+            QLGLT  YMF D    E++AATPF+H++   G   G  G + + K LPPT ++QYY  G 
+Sbjct  59   QLGLTLGYMFTDNISFEVLAATPFSHKISTSGGELGSLGDIGETKHLPPTFMVQYY-FGE  117
+
+Query  129  TNSAFQPYGGLGVNYTTFFDEDLASNRKAQGFSSMKLQDSWGLAGELGFDYMLNEHALFN  188
+             NS F+PY G G+NYTTFFDE         G S +KL DSWGLA  +GFDYMLN+    N
+Sbjct  118  ANSTFRPYVGAGLNYTTFFDESFNGTGTNAGLSDLKLDDSWGLAANVGFDYMLNDSWFLN  177
+
+Query  189  MAVWYMDIDTKASINGPSALGVNKTKVDVDVDPWVYMIGFGYKF  232
+             +VWY +I+T A+       G +    DV+++PWV+MI  GYKF
+Sbjct  178  ASVWYANIETTATYKA----GADAKSTDVEINPWVFMIAGGYKF  217
+
+
+> UniRef90_P0A915 Outer membrane protein W n=450 Tax=root TaxID=1 
+RepID=OMPW_ECOLI
+Length=212
+
+ Score = 244 bits (622),  Expect = 8e-79, Method: Composition-based stats.
+ Identities = 100/232 (43%), Positives = 136/232 (59%), Gaps = 20/232 (9%)
+
+Query  1    MRKSWLTASLLALTVASPFAAADIQGHKAGDFIIRGGFATVDPDDSSSDIKLDGAKQRGT  60
+            M+K  LT + LA+T      +     H+AG+F +R G ATV P + +      G      
+Sbjct  1    MKK--LTVAALAVTT---LLSGSAFAHEAGEFFMRAGSATVRPTEGAG-----GTLGSLG  50
+
+Query  61   KATVDSDTQLGLTFTYMFADKWGVELVAATPFNHQVDVKGLGPGLDGKLADIKQLPPTLL  120
+              +V ++TQLGLTFTYM  D  GVEL+AATPF H++  +       G +A +  LPPTL+
+Sbjct  51   GFSVTNNTQLGLTFTYMATDNIGVELLAATPFRHKIGTRA-----TGDIATVHHLPPTLM  105
+
+Query  121  LQYYPMGGTNSAFQPYGGLGVNYTTFFDEDLASNRKAQGFSSMKLQDSWGLAGELGFDYM  180
+             Q+Y  G  +S F+PY G G+NYTTFFD     + K  G S + L+DSWG AG++G DY+
+Sbjct  106  AQWY-FGDASSKFRPYVGAGINYTTFFDNGFNDHGKEAGLSDLSLKDSWGAAGQVGVDYL  164
+
+Query  181  LNEHALFNMAVWYMDIDTKASINGPSALGVNKTKVDVDVDPWVYMIGFGYKF  232
+            +N   L NM+VWYMDIDT A+      LG  +    V +DPWV+M   GY+F
+Sbjct  165  INRDWLVNMSVWYMDIDTTANYK----LGGAQQHDSVRLDPWVFMFSAGYRF  212
+
+
+> UniRef90_Q8ZP50 Outer membrane protein W n=180 Tax=Enterobacteriaceae 
+TaxID=543 RepID=OMPW_SALTY
+Length=212
+
+ Score = 243 bits (621),  Expect = 1e-78, Method: Composition-based stats.
+ Identities = 101/232 (44%), Positives = 134/232 (58%), Gaps = 20/232 (9%)
+
+Query  1    MRKSWLTASLLALTVASPFAAADIQGHKAGDFIIRGGFATVDPDDSSSDIKLDGAKQRGT  60
+            M+K   T + LALT      +     H+AG+F +R G ATV P + +      G      
+Sbjct  1    MKK--FTVAALALTT---LLSGSAFAHEAGEFFMRAGPATVRPTEGAG-----GTLGHLN  50
+
+Query  61   KATVDSDTQLGLTFTYMFADKWGVELVAATPFNHQVDVKGLGPGLDGKLADIKQLPPTLL  120
+               V ++TQLGLTFTYM  D  GVEL+AATPF H+V     G G  G +A +  LPPTL+
+Sbjct  51   GFDVSNNTQLGLTFTYMATDNIGVELLAATPFRHKV-----GTGATGDIATVHLLPPTLM  105
+
+Query  121  LQYYPMGGTNSAFQPYGGLGVNYTTFFDEDLASNRKAQGFSSMKLQDSWGLAGELGFDYM  180
+             Q+Y  G ++S  +PY G+GVNYTTFFD D   N K  G S +  +DSWG AG++G DY+
+Sbjct  106  AQWY-FGDSSSKVRPYVGVGVNYTTFFDNDFNDNGKNAGLSDLSFKDSWGAAGQVGVDYL  164
+
+Query  181  LNEHALFNMAVWYMDIDTKASINGPSALGVNKTKVDVDVDPWVYMIGFGYKF  232
+            +N   L   +VWYMDIDT A+      +G  +    V +DPWV+M   GY+F
+Sbjct  165  INRDWLIGASVWYMDIDTTANYK----MGGVQHHDSVRLDPWVFMFSAGYRF  212
+
+
+> UniRef90_Q00595 Outer membrane protein AlkL n=4 Tax=Pseudomonas 
+TaxID=286 RepID=ALKL_PSEOL
+Length=230
+
+ Score = 196 bits (497),  Expect = 1e-59, Method: Composition-based stats.
+ Identities = 48/211 (23%), Positives = 83/211 (39%), Gaps = 13/211 (6%)
+
+Query  22   ADIQGHKAGDFIIRGGFATVDPDDSSSDIKLDGAKQRGTKATVDSDTQLGLTFTYMFADK  81
+            A   G+  GD++    F+ V   +   D+ + G        ++ +DT L     Y  +  
+Sbjct  33   AKSAGYNQGDWVASFNFSKVYVGEELGDLNVGGGALPNADVSIGNDTTLTFDIAYFVSSN  92
+
+Query  82   WGVELVAATPFNHQVDVKGLGPGLDGKLADIKQLPPTLLLQYYPMGGTNSAFQPYGGLGV  141
+              V+     P   +   +       G+++++   P  L LQY+    +     PY G+GV
+Sbjct  93   IAVDFFVGVPARAKFQGEK-SISSLGRVSEVDYGPAILSLQYHY--DSFERLYPYVGVGV  149
+
+Query  142  NYTTFFDEDLASNRKAQGFSSMKLQDSWGLAGELGFDYMLNEHALFNMAVWYMDIDTKAS  201
+                FFD      +     SS  ++D W  A ++G  Y L    + N  V Y+   T  +
+Sbjct  150  GRVLFFD------KTDGALSSFDIKDKWAPAFQVGLRYDLGNSWMLNSDVRYIPFKTDVT  203
+
+Query  202  INGPSALGVNKTKVDVDVDPWVYMIGFGYKF  232
+                  LG       ++VDP++  +G  Y F
+Sbjct  204  ----GTLGPVPVSTKIEVDPFILSLGASYVF  230
+
+
+> UniRef90_P0A145 Dibenzothiophene metabolism operon protein PahQ 
+n=14 Tax=root TaxID=1 RepID=NAHQ_PSEAI
+Length=211
+
+ Score = 180 bits (456),  Expect = 6e-54, Method: Composition-based stats.
+ Identities = 52/214 (24%), Positives = 82/214 (38%), Gaps = 15/214 (7%)
+
+Query  19   FAAADIQGHKAGDFIIRGGFATVDPDDSSSDIKLDGAKQRGTKATVDSDTQLGLTFTYMF  78
+            F  A     +   +  R G   V   D+S+ + L+G +  G  A    +  L   F Y  
+Sbjct  13   FCLASPTWAEESPWTYRIGMTNV-AFDASAKVYLNGQRVPGGSADASDNNALTFDFGYAI  71
+
+Query  79   ADKWGVELVAATPFNHQVDVKGLGPGLDGKLADIKQLPPTLLLQYYPMGGTNSAFQPYGG  138
+             D+W V  +   P   +V   G  PG+  +L  I   P  L L Y          +P+ G
+Sbjct  72   NDQWNVRAIVGIPPTTKVTGAGTLPGI--QLGKITYAPTVLTLNYN--LPALGPVRPHIG  127
+
+Query  139  LGVNYTTFFDEDLASNRKAQGFSSMKLQDSWGLAGELGFDYMLNEHALFNMAVWYMDIDT  198
+             GVNYT  F+       +     S     +W  A  +G D  +N     ++ +  + + T
+Sbjct  128  AGVNYTRIFES------RDANLKSFDADHAWSPALHVGADIDVNRGWFVSIDIRKLYLKT  181
+
+Query  199  KASINGPSALGVNKTKVDVDVDPWVYMIGFGYKF  232
+                +    LG  + K  V +DP +  I  G +F
+Sbjct  182  ----DASGYLGPQEAKARVTLDPLLTSIAIGRQF  211
+
+
+> UniRef90_P55561 Uncharacterized outer-membrane protein y4mB n=5 
+Tax=Sinorhizobium/Ensifer group TaxID=227292 RepID=Y4MB_SINFN
+Length=229
+
+ Score = 153 bits (386),  Expect = 3e-43, Method: Composition-based stats.
+ Identities = 51/189 (27%), Positives = 84/189 (44%), Gaps = 18/189 (10%)
+
+Query  44   DDSSSDIKLDGAKQRGTKATVDSDTQLGLTFTYMFADKWGVELVAATPFNHQVDVKGLGP  103
+             + S  I        G+  +        L  +Y F D    EL+  T + +  +V  +G 
+Sbjct  59   TEDSGSING----VPGSDLSYSDSLIPELDISYFFTDNIAAELILGTTYANIKEVGAVGV  114
+
+Query  104  GLDGKLADIKQLPPTLLLQYYPMGGTNSAFQPYGGLGVNYTTFFDEDLASNRKAQGFSSM  163
+                 +     LPPTL LQY+       AF+PY G G+NY+ F+++      +  GF  +
+Sbjct  115  ----PVGKAWLLPPTLTLQYHFT--DFGAFKPYLGAGINYSLFYNQS-----EKAGFHDL  163
+
+Query  164  KLQDSWGLAGELGFDYMLNEHALFNMAVWYMDIDTKASINGPSALGVNKTKVDVDVDPWV  223
+             + +  G A ++GFDYM++EH   N  V  + ++T+   +    LG         +DPW+
+Sbjct  164  DVDNHVGAALQVGFDYMVDEHWGVNFDVKKIFLETEWKAD-HDVLGP--LSGKAKIDPWL  220
+
+Query  224  YMIGFGYKF  232
+               G  Y+F
+Sbjct  221  IGAGVTYRF  229
+
+
+> UniRef90_Q9ZE71 Putative outer membrane protein RP075 n=5 Tax=typhus 
+group TaxID=114292 RepID=Y075_RICPR
+Length=243
+
+ Score = 121 bits (302),  Expect = 8e-31, Method: Composition-based stats.
+ Identities = 38/148 (26%), Positives = 66/148 (45%), Gaps = 22/148 (15%)
+
+Query  87   VAATPFNHQVDVKGLGPGLDGKLADIKQLPPTLLLQYY--PMGGTNSAFQPYGGLGVNYT  144
+            +AA   N+ VD   L     GK   I  +P TL  Q++  P GG     +PY G+G + +
+Sbjct  116  LAAVAHNYGVDNVKL-----GKHKPIYMIPATLTGQFHIAPYGG----IRPYIGIGYHGS  166
+
+Query  145  TFFDEDLASNRKAQGFSSMKLQDSWGLAGELGFDYMLNEHALFNMAVWYMDIDTKASING  204
+                +           + +K+++ + + G++G D+   +  L NM V    +  K     
+Sbjct  167  YMLTQA----------TGLKIRNGYNIVGQIGVDFYAKDDTLINMDVRQFFLKPKLEYK-  215
+
+Query  205  PSALGVNKTKVDVDVDPWVYMIGFGYKF  232
+            P+ +G  K    V ++P +  IG G+ F
+Sbjct  216  PNLVGNKKVTSKVKLNPLIVSIGIGFTF  243
+
+
+> UniRef90_Q92JG2 Putative outer membrane protein RC0105 n=43 Tax=Rickettsia 
+TaxID=780 RepID=Y105_RICCN
+Length=244
+
+ Score = 112 bits (281),  Expect = 1e-27, Method: Composition-based stats.
+ Identities = 36/148 (24%), Positives = 65/148 (44%), Gaps = 22/148 (15%)
+
+Query  87   VAATPFNHQVDVKGLGPGLDGKLADIKQLPPTLLLQYY--PMGGTNSAFQPYGGLGVNYT  144
+            +AA   N+ VD   L     GK   I  +P T+  Q++  P GG     +PY G+G + +
+Sbjct  117  LAAVAHNYGVDNVKL-----GKHKPIYMIPATITGQFHIAPYGG----IRPYIGIGYHGS  167
+
+Query  145  TFFDEDLASNRKAQGFSSMKLQDSWGLAGELGFDYMLNEHALFNMAVWYMDIDTKASING  204
+                +           + +K+++  G  G++G D+   +  L N+ V    ++ K     
+Sbjct  168  YMLTQA----------TGLKIRNGHGAVGQIGVDFYAKDDTLINIDVRQFFLNPKLEYK-  216
+
+Query  205  PSALGVNKTKVDVDVDPWVYMIGFGYKF  232
+            P+ +G       V ++P +  IG G+ F
+Sbjct  217  PNLVGNKTMTSKVKLNPLIVSIGIGFTF  244
+
+
+> UniRef90_Q1RKL1 Putative outer membrane protein RBE_0022 n=6 
+Tax=Rickettsia TaxID=780 RepID=Y022_RICBR
+Length=245
+
+ Score = 96.0 bits (237),  Expect = 1e-21, Method: Composition-based stats.
+ Identities = 33/165 (20%), Positives = 66/165 (40%), Gaps = 22/165 (13%)
+
+Query  68   TQLGLTFTYMFADKWGVELVAATPFNHQVDVKGLGPGLDGKLADIKQLPPTLLLQYYPMG  127
+            T+L L F  +        +++   +N+ V          GK   +  +P T+  Q++   
+Sbjct  103  TELSLGFNVLRTKN---SVLSNVSYNYGVG------ATPGKSKPLYMIPATITGQFHVA-  152
+
+Query  128  GTNSAFQPYGGLGVNYTTFFDEDLASNRKAQGFSSMKLQDSWGLAGELGFDYMLNEHALF  187
+                  +PY GLG + +    +           S +K+++  G  G++G D+   +  + 
+Sbjct  153  -PFGGIRPYVGLGYHGSYMITQS----------SGIKIRNGNGFVGQIGLDFYAKDDTVI  201
+
+Query  188  NMAVWYMDIDTKASINGPSALGVNKTKVDVDVDPWVYMIGFGYKF  232
+            N+ +    ++ K     PS +G         ++P V  IG G+ F
+Sbjct  202  NLDIKQYYLNPKIVYK-PSLVGNQNITSRTKLNPLVVSIGIGFSF  245
+
+
+> UniRef90_Q51946 Dibenzothiophene metabolism operon protein NahQ/DoxH 
+(Fragment) n=7 Tax=Bacteria TaxID=2 RepID=NAHQ_PSEPU
+Length=52
+
+ Score = 53.7 bits (127),  Expect = 7e-08, Method: Composition-based stats.
+ Identities = 11/56 (20%), Positives = 24/56 (43%), Gaps = 4/56 (7%)
+
+Query  177  FDYMLNEHALFNMAVWYMDIDTKASINGPSALGVNKTKVDVDVDPWVYMIGFGYKF  232
+             D  ++ +   ++ +  + + T    +    LG  + K  V +DP +  I  G +F
+Sbjct  1    ADIDVSRNWFVSIDIRKLYLKT----DASGYLGPQEAKAKVTLDPLITSIAIGRQF  52
+
+
+
+Lambda      K        H        a         alpha
+   0.312    0.121    0.301    0.792     4.96 
+
+Gapped
+Lambda      K        H        a         alpha    sigma
+   0.267   0.0368    0.140     1.90     42.6     43.6 
+
+Effective search space used: 70841472048
+Results from round 3
+
+
+Query= Q9HWW1_PSEAE_observed_topology
+
+Length=232
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+Sequences used in model and found again:
+
+  UniRef90_P0A915 Outer membrane protein W n=450 Tax=root TaxID=1...  247     5e-80
+  UniRef90_Q8ZP50 Outer membrane protein W n=180 Tax=Enterobacter...  245     3e-79
+  UniRef90_P17266 Outer membrane protein W n=58 Tax=Vibrio TaxID=...  244     6e-79
+  UniRef90_P0A145 Dibenzothiophene metabolism operon protein PahQ...  214     4e-67
+  UniRef90_Q00595 Outer membrane protein AlkL n=4 Tax=Pseudomonas...  201     1e-61
+  UniRef90_P55561 Uncharacterized outer-membrane protein y4mB n=5...  181     5e-54
+  UniRef90_Q1RKL1 Putative outer membrane protein RBE_0022 n=6 Ta...  142     7e-39
+  UniRef90_Q9ZE71 Putative outer membrane protein RP075 n=5 Tax=t...  140     3e-38
+  UniRef90_Q92JG2 Putative outer membrane protein RC0105 n=43 Tax...  136     1e-36
+  UniRef90_Q51946 Dibenzothiophene metabolism operon protein NahQ...  66.4    2e-12
+
+Sequences not found previously or not previously below threshold:
+
+
+
+> UniRef90_P0A915 Outer membrane protein W n=450 Tax=root TaxID=1 
+RepID=OMPW_ECOLI
+Length=212
+
+ Score = 247 bits (630),  Expect = 5e-80, Method: Composition-based stats.
+ Identities = 100/232 (43%), Positives = 136/232 (59%), Gaps = 20/232 (9%)
+
+Query  1    MRKSWLTASLLALTVASPFAAADIQGHKAGDFIIRGGFATVDPDDSSSDIKLDGAKQRGT  60
+            M+K  LT + LA+T      +     H+AG+F +R G ATV P + +      G      
+Sbjct  1    MKK--LTVAALAVTT---LLSGSAFAHEAGEFFMRAGSATVRPTEGAG-----GTLGSLG  50
+
+Query  61   KATVDSDTQLGLTFTYMFADKWGVELVAATPFNHQVDVKGLGPGLDGKLADIKQLPPTLL  120
+              +V ++TQLGLTFTYM  D  GVEL+AATPF H++  +       G +A +  LPPTL+
+Sbjct  51   GFSVTNNTQLGLTFTYMATDNIGVELLAATPFRHKIGTRA-----TGDIATVHHLPPTLM  105
+
+Query  121  LQYYPMGGTNSAFQPYGGLGVNYTTFFDEDLASNRKAQGFSSMKLQDSWGLAGELGFDYM  180
+             Q+Y  G  +S F+PY G G+NYTTFFD     + K  G S + L+DSWG AG++G DY+
+Sbjct  106  AQWY-FGDASSKFRPYVGAGINYTTFFDNGFNDHGKEAGLSDLSLKDSWGAAGQVGVDYL  164
+
+Query  181  LNEHALFNMAVWYMDIDTKASINGPSALGVNKTKVDVDVDPWVYMIGFGYKF  232
+            +N   L NM+VWYMDIDT A+      LG  +    V +DPWV+M   GY+F
+Sbjct  165  INRDWLVNMSVWYMDIDTTANYK----LGGAQQHDSVRLDPWVFMFSAGYRF  212
+
+
+> UniRef90_Q8ZP50 Outer membrane protein W n=180 Tax=Enterobacteriaceae 
+TaxID=543 RepID=OMPW_SALTY
+Length=212
+
+ Score = 245 bits (625),  Expect = 3e-79, Method: Composition-based stats.
+ Identities = 101/232 (44%), Positives = 134/232 (58%), Gaps = 20/232 (9%)
+
+Query  1    MRKSWLTASLLALTVASPFAAADIQGHKAGDFIIRGGFATVDPDDSSSDIKLDGAKQRGT  60
+            M+K   T + LALT      +     H+AG+F +R G ATV P + +      G      
+Sbjct  1    MKK--FTVAALALTT---LLSGSAFAHEAGEFFMRAGPATVRPTEGAG-----GTLGHLN  50
+
+Query  61   KATVDSDTQLGLTFTYMFADKWGVELVAATPFNHQVDVKGLGPGLDGKLADIKQLPPTLL  120
+               V ++TQLGLTFTYM  D  GVEL+AATPF H+V     G G  G +A +  LPPTL+
+Sbjct  51   GFDVSNNTQLGLTFTYMATDNIGVELLAATPFRHKV-----GTGATGDIATVHLLPPTLM  105
+
+Query  121  LQYYPMGGTNSAFQPYGGLGVNYTTFFDEDLASNRKAQGFSSMKLQDSWGLAGELGFDYM  180
+             Q+Y  G ++S  +PY G+GVNYTTFFD D   N K  G S +  +DSWG AG++G DY+
+Sbjct  106  AQWY-FGDSSSKVRPYVGVGVNYTTFFDNDFNDNGKNAGLSDLSFKDSWGAAGQVGVDYL  164
+
+Query  181  LNEHALFNMAVWYMDIDTKASINGPSALGVNKTKVDVDVDPWVYMIGFGYKF  232
+            +N   L   +VWYMDIDT A+      +G  +    V +DPWV+M   GY+F
+Sbjct  165  INRDWLIGASVWYMDIDTTANYK----MGGVQHHDSVRLDPWVFMFSAGYRF  212
+
+
+> UniRef90_P17266 Outer membrane protein W n=58 Tax=Vibrio TaxID=662 
+RepID=OMPW_VIBCH
+Length=217
+
+ Score = 244 bits (623),  Expect = 6e-79, Method: Composition-based stats.
+ Identities = 99/224 (44%), Positives = 136/224 (61%), Gaps = 10/224 (4%)
+
+Query  9    SLLALTVASPFAAADIQGHKAGDFIIRGGFATVDPDDSSSDIKLDGAKQRGTKATVDSDT  68
+            ++  L V +  ++A +  H+ GDFI+R G A+V P+DSS     D      ++  V+S+T
+Sbjct  4    TICGLAVLAALSSAPVFAHQEGDFIVRAGIASVVPNDSS-----DKVLNTQSELAVNSNT  58
+
+Query  69   QLGLTFTYMFADKWGVELVAATPFNHQVDVKGLGPGLDGKLADIKQLPPTLLLQYYPMGG  128
+            QLGLT  YMF D    E++AATPF+H++   G   G  G + + K LPPT ++QYY  G 
+Sbjct  59   QLGLTLGYMFTDNISFEVLAATPFSHKISTSGGELGSLGDIGETKHLPPTFMVQYY-FGE  117
+
+Query  129  TNSAFQPYGGLGVNYTTFFDEDLASNRKAQGFSSMKLQDSWGLAGELGFDYMLNEHALFN  188
+             NS F+PY G G+NYTTFFDE         G S +KL DSWGLA  +GFDYMLN+    N
+Sbjct  118  ANSTFRPYVGAGLNYTTFFDESFNGTGTNAGLSDLKLDDSWGLAANVGFDYMLNDSWFLN  177
+
+Query  189  MAVWYMDIDTKASINGPSALGVNKTKVDVDVDPWVYMIGFGYKF  232
+             +VWY +I+T A+       G +    DV+++PWV+MI  GYKF
+Sbjct  178  ASVWYANIETTATYKA----GADAKSTDVEINPWVFMIAGGYKF  217
+
+
+> UniRef90_P0A145 Dibenzothiophene metabolism operon protein PahQ 
+n=14 Tax=root TaxID=1 RepID=NAHQ_PSEAI
+Length=211
+
+ Score = 214 bits (545),  Expect = 4e-67, Method: Composition-based stats.
+ Identities = 53/218 (24%), Positives = 83/218 (38%), Gaps = 15/218 (7%)
+
+Query  15   VASPFAAADIQGHKAGDFIIRGGFATVDPDDSSSDIKLDGAKQRGTKATVDSDTQLGLTF  74
+            V   F  A     +   +  R G   V   D+S+ + L+G +  G  A    +  L   F
+Sbjct  9    VYPLFCLASPTWAEESPWTYRIGMTNV-AFDASAKVYLNGQRVPGGSADASDNNALTFDF  67
+
+Query  75   TYMFADKWGVELVAATPFNHQVDVKGLGPGLDGKLADIKQLPPTLLLQYYPMGGTNSAFQ  134
+             Y   D+W V  +   P   +V   G  PG+  +L  I   P  L L Y          +
+Sbjct  68   GYAINDQWNVRAIVGIPPTTKVTGAGTLPGI--QLGKITYAPTVLTLNYN--LPALGPVR  123
+
+Query  135  PYGGLGVNYTTFFDEDLASNRKAQGFSSMKLQDSWGLAGELGFDYMLNEHALFNMAVWYM  194
+            P+ G GVNYT  F+       +     S     +W  A  +G D  +N     ++ +  +
+Sbjct  124  PHIGAGVNYTRIFES------RDANLKSFDADHAWSPALHVGADIDVNRGWFVSIDIRKL  177
+
+Query  195  DIDTKASINGPSALGVNKTKVDVDVDPWVYMIGFGYKF  232
+             + T    +    LG  + K  V +DP +  I  G +F
+Sbjct  178  YLKT----DASGYLGPQEAKARVTLDPLLTSIAIGRQF  211
+
+
+> UniRef90_Q00595 Outer membrane protein AlkL n=4 Tax=Pseudomonas 
+TaxID=286 RepID=ALKL_PSEOL
+Length=230
+
+ Score = 201 bits (510),  Expect = 1e-61, Method: Composition-based stats.
+ Identities = 48/211 (23%), Positives = 83/211 (39%), Gaps = 13/211 (6%)
+
+Query  22   ADIQGHKAGDFIIRGGFATVDPDDSSSDIKLDGAKQRGTKATVDSDTQLGLTFTYMFADK  81
+            A   G+  GD++    F+ V   +   D+ + G        ++ +DT L     Y  +  
+Sbjct  33   AKSAGYNQGDWVASFNFSKVYVGEELGDLNVGGGALPNADVSIGNDTTLTFDIAYFVSSN  92
+
+Query  82   WGVELVAATPFNHQVDVKGLGPGLDGKLADIKQLPPTLLLQYYPMGGTNSAFQPYGGLGV  141
+              V+     P   +   +       G+++++   P  L LQY+    +     PY G+GV
+Sbjct  93   IAVDFFVGVPARAKFQGEK-SISSLGRVSEVDYGPAILSLQYHY--DSFERLYPYVGVGV  149
+
+Query  142  NYTTFFDEDLASNRKAQGFSSMKLQDSWGLAGELGFDYMLNEHALFNMAVWYMDIDTKAS  201
+                FFD      +     SS  ++D W  A ++G  Y L    + N  V Y+   T  +
+Sbjct  150  GRVLFFD------KTDGALSSFDIKDKWAPAFQVGLRYDLGNSWMLNSDVRYIPFKTDVT  203
+
+Query  202  INGPSALGVNKTKVDVDVDPWVYMIGFGYKF  232
+                  LG       ++VDP++  +G  Y F
+Sbjct  204  ----GTLGPVPVSTKIEVDPFILSLGASYVF  230
+
+
+> UniRef90_P55561 Uncharacterized outer-membrane protein y4mB n=5 
+Tax=Sinorhizobium/Ensifer group TaxID=227292 RepID=Y4MB_SINFN
+Length=229
+
+ Score = 181 bits (458),  Expect = 5e-54, Method: Composition-based stats.
+ Identities = 57/220 (26%), Positives = 92/220 (42%), Gaps = 19/220 (9%)
+
+Query  13   LTVASPFAAADIQGHKAGDFIIRGGFATVDPDDSSSDIKLDGAKQRGTKATVDSDTQLGL  72
+            LT      A +        + IR     V   + S  I        G+  +        L
+Sbjct  29   LTSPPVAPATEGVAAGLSPWQIRVRGLGVL-TEDSGSING----VPGSDLSYSDSLIPEL  83
+
+Query  73   TFTYMFADKWGVELVAATPFNHQVDVKGLGPGLDGKLADIKQLPPTLLLQYYPMGGTNSA  132
+              +Y F D    EL+  T + +  +V  +G      +     LPPTL LQY+       A
+Sbjct  84   DISYFFTDNIAAELILGTTYANIKEVGAVGV----PVGKAWLLPPTLTLQYHFT--DFGA  137
+
+Query  133  FQPYGGLGVNYTTFFDEDLASNRKAQGFSSMKLQDSWGLAGELGFDYMLNEHALFNMAVW  192
+            F+PY G G+NY+ F+++      +  GF  + + +  G A ++GFDYM++EH   N  V 
+Sbjct  138  FKPYLGAGINYSLFYNQS-----EKAGFHDLDVDNHVGAALQVGFDYMVDEHWGVNFDVK  192
+
+Query  193  YMDIDTKASINGPSALGVNKTKVDVDVDPWVYMIGFGYKF  232
+             + ++T+   +    LG         +DPW+   G  Y+F
+Sbjct  193  KIFLETEWKAD-HDVLGP--LSGKAKIDPWLIGAGVTYRF  229
+
+
+> UniRef90_Q1RKL1 Putative outer membrane protein RBE_0022 n=6 
+Tax=Rickettsia TaxID=780 RepID=Y022_RICBR
+Length=245
+
+ Score = 142 bits (358),  Expect = 7e-39, Method: Composition-based stats.
+ Identities = 33/165 (20%), Positives = 66/165 (40%), Gaps = 22/165 (13%)
+
+Query  68   TQLGLTFTYMFADKWGVELVAATPFNHQVDVKGLGPGLDGKLADIKQLPPTLLLQYYPMG  127
+            T+L L F  +        +++   +N+ V          GK   +  +P T+  Q++   
+Sbjct  103  TELSLGFNVLRTKN---SVLSNVSYNYGVG------ATPGKSKPLYMIPATITGQFHVA-  152
+
+Query  128  GTNSAFQPYGGLGVNYTTFFDEDLASNRKAQGFSSMKLQDSWGLAGELGFDYMLNEHALF  187
+                  +PY GLG + +    +           S +K+++  G  G++G D+   +  + 
+Sbjct  153  -PFGGIRPYVGLGYHGSYMITQS----------SGIKIRNGNGFVGQIGLDFYAKDDTVI  201
+
+Query  188  NMAVWYMDIDTKASINGPSALGVNKTKVDVDVDPWVYMIGFGYKF  232
+            N+ +    ++ K     PS +G         ++P V  IG G+ F
+Sbjct  202  NLDIKQYYLNPKIVYK-PSLVGNQNITSRTKLNPLVVSIGIGFSF  245
+
+
+> UniRef90_Q9ZE71 Putative outer membrane protein RP075 n=5 Tax=typhus 
+group TaxID=114292 RepID=Y075_RICPR
+Length=243
+
+ Score = 140 bits (353),  Expect = 3e-38, Method: Composition-based stats.
+ Identities = 38/164 (23%), Positives = 68/164 (41%), Gaps = 21/164 (13%)
+
+Query  69   QLGLTFTYMFADKWGVELVAATPFNHQVDVKGLGPGLDGKLADIKQLPPTLLLQYYPMGG  128
+            +L L F  +         +AA   N+ VD   L     GK   I  +P TL  Q++    
+Sbjct  101  ELSLGFNVLRTKYTS---LAAVAHNYGVDNVKL-----GKHKPIYMIPATLTGQFHIA--  150
+
+Query  129  TNSAFQPYGGLGVNYTTFFDEDLASNRKAQGFSSMKLQDSWGLAGELGFDYMLNEHALFN  188
+                 +PY G+G + +    +           + +K+++ + + G++G D+   +  L N
+Sbjct  151  PYGGIRPYIGIGYHGSYMLTQA----------TGLKIRNGYNIVGQIGVDFYAKDDTLIN  200
+
+Query  189  MAVWYMDIDTKASINGPSALGVNKTKVDVDVDPWVYMIGFGYKF  232
+            M V    +  K     P+ +G  K    V ++P +  IG G+ F
+Sbjct  201  MDVRQFFLKPKLEYK-PNLVGNKKVTSKVKLNPLIVSIGIGFTF  243
+
+
+> UniRef90_Q92JG2 Putative outer membrane protein RC0105 n=43 Tax=Rickettsia 
+TaxID=780 RepID=Y105_RICCN
+Length=244
+
+ Score = 136 bits (343),  Expect = 1e-36, Method: Composition-based stats.
+ Identities = 39/190 (21%), Positives = 76/190 (40%), Gaps = 24/190 (13%)
+
+Query  46   SSSDIKLDGAKQRGTKATVDSD---TQLGLTFTYMFADKWGVELVAATPFNHQVDVKGLG  102
+            S  ++  +G     +     ++   T+L L F  +         +AA   N+ VD   L 
+Sbjct  76   SVGEVAKNGYGGDASTTIFFNNYLATELSLGFNVLRTKYTS---LAAVAHNYGVDNVKL-  131
+
+Query  103  PGLDGKLADIKQLPPTLLLQYYPMGGTNSAFQPYGGLGVNYTTFFDEDLASNRKAQGFSS  162
+                GK   I  +P T+  Q++         +PY G+G + +    +           + 
+Sbjct  132  ----GKHKPIYMIPATITGQFHIA--PYGGIRPYIGIGYHGSYMLTQA----------TG  175
+
+Query  163  MKLQDSWGLAGELGFDYMLNEHALFNMAVWYMDIDTKASINGPSALGVNKTKVDVDVDPW  222
+            +K+++  G  G++G D+   +  L N+ V    ++ K     P+ +G       V ++P 
+Sbjct  176  LKIRNGHGAVGQIGVDFYAKDDTLINIDVRQFFLNPKLEYK-PNLVGNKTMTSKVKLNPL  234
+
+Query  223  VYMIGFGYKF  232
+            +  IG G+ F
+Sbjct  235  IVSIGIGFTF  244
+
+
+> UniRef90_Q51946 Dibenzothiophene metabolism operon protein NahQ/DoxH 
+(Fragment) n=7 Tax=Bacteria TaxID=2 RepID=NAHQ_PSEPU
+Length=52
+
+ Score = 66.4 bits (160),  Expect = 2e-12, Method: Composition-based stats.
+ Identities = 11/56 (20%), Positives = 24/56 (43%), Gaps = 4/56 (7%)
+
+Query  177  FDYMLNEHALFNMAVWYMDIDTKASINGPSALGVNKTKVDVDVDPWVYMIGFGYKF  232
+             D  ++ +   ++ +  + + T    +    LG  + K  V +DP +  I  G +F
+Sbjct  1    ADIDVSRNWFVSIDIRKLYLKT----DASGYLGPQEAKAKVTLDPLITSIAIGRQF  52
+
+
+
+Lambda      K        H        a         alpha
+   0.310    0.121    0.294    0.792     4.96 
+
+Gapped
+Lambda      K        H        a         alpha    sigma
+   0.267   0.0373    0.140     1.90     42.6     43.6 
+
+Effective search space used: 70841472048
+
+Search has CONVERGED!
+
+
+  Database: /scratch/uniref90.fasta
+    Posted date:  Jan 22, 2018  4:02 PM
+  Number of letters in database: 999,999,380
+  Number of sequences in database:  2,774,676
+
+
+
+Matrix: BLOSUM62
+Gap Penalties: Existence: 11, Extension: 1
+Neighboring words threshold: 11
+Window for multiple hits: 40
