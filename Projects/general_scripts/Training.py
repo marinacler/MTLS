@@ -13,14 +13,19 @@ import pickle
 start_time = datetime.now()
 print('Model Training Program is running...')
 parsed_dictionary_training=prs.parse_fasta_topology('../../datasets/example.txt')
-# ('../../datasets/membrane-beta_2state.3line.txt')# 
-#for slidwindow in range(35,36):# ,2):
-for m in range(-6,-4):
-	c=1*10**m
+# ('../../datasets/membrane-beta_2state.3line.txt')
+print('HALF DATASET')
+
+for m in [x * 0.1 for x in range(1, 11)]:
+	c=m
 	print('C VARIABLE EQUAL TO: ',c)
 	slidwindow=35
+#for slidwindow in range(5,50,2):
 	traininginput, trainingoutput = prs.input_for_training(parsed_dictionary_training,slidwindow)
-
+	
+	for value in range(-10,1):
+	    gammavalue=10**value
+	    print('GAMMA VARIABLE EQUAL TO: ',gammavalue)
 ################################################################################
 ### Train the SVM (no cross val)
 ################################################################################
@@ -30,53 +35,67 @@ for m in range(-6,-4):
 ################################################################################
 ### Training the SVM with 5 cross-validation datasets
 ################################################################################
-	clf0 = svm.SVC(kernel='linear', C=c, cache_size=3000)
-	print('LINEAR KERNEL TYPE')
-	clf=train.crossvalidation(traininginput, trainingoutput, clf0, slidwindow)
-	print('')
-	print('')
-	#clf6 = svm.SVC(kernel='rbf', C=1, cache_size=3000)
-	#print('RBF KERNEL TYPE')
-	#clf2=train.crossvalidation(traininginput, trainingoutput, clf6, slidwindow)
-	#print('')
-	#print('')
-	#clf2 = svm.SVC(kernel='poly', C=1, cache_size=3000)
-	#print('POLYNOMIAL KERNEL TYPE')
-	#clf3=train.crossvalidation(traininginput, trainingoutput, clf2, slidwindow)
-	#print('')
-	#print('')
-	#clf4 = svm.SVC(kernel='sigmoid', C=1, cache_size=3000)
-	#print('SIGMOID KERNEL TYPE')
-	#clf5=train.crossvalidation(traininginput, trainingoutput, clf4, slidwindow)
-	#print('')
-	#print('')
+	    #clf0 = svm.SVC(kernel='linear', C=c, cache_size=4000)
+	    #print('LINEAR KERNEL TYPE')
+	    #clf=train.crossvalidation(traininginput, trainingoutput, clf0, slidwindow)
+	    #print('')
+	    #print('')
+	    clf6 = svm.SVC(kernel='rbf', C=c, cache_size=4000, gamma=gammavalue)
+	    print('RBF KERNEL TYPE')
+	    clf1=train.crossvalidation(traininginput, trainingoutput, clf6, slidwindow)
+	    print('')
+	    print('')
+	    clf2 = svm.SVC(kernel='poly', C=c, cache_size=4000, gamma=gammavalue)
+	    print('POLYNOMIAL KERNEL TYPE')
+	    clf3=train.crossvalidation(traininginput, trainingoutput, clf2, slidwindow)
+	    print('')
+	    print('')
+	    clf4 = svm.SVC(kernel='sigmoid', C=c, cache_size=4000, gamma=gammavalue)
+	    print('SIGMOID KERNEL TYPE')
+	    clf5=train.crossvalidation(traininginput, trainingoutput, clf4, slidwindow)
+	    print('')
+	    print('')
+################################################################################
+### This has to be deleted later
+################################################################################
 
-for m in range(5,7):
-	c=1*10**m
+for m in range(1, 3):
+	c=10**m
 	print('C VARIABLE EQUAL TO: ',c)
 	slidwindow=35
+#for slidwindow in range(5,50,2):
 	traininginput, trainingoutput = prs.input_for_training(parsed_dictionary_training,slidwindow)
+	
+	for value in range(-8,1):
+	    gammavalue=10**value
+	    #clf0 = svm.SVC(kernel='linear', C=c, cache_size=4000)
+	    #print('LINEAR KERNEL TYPE')
+	    #clf=train.crossvalidation(traininginput, trainingoutput, clf0, slidwindow)
+	    #print('')
+	    #print('')
+	    clf6 = svm.SVC(kernel='rbf', C=c, cache_size=4000)
+	    print('RBF KERNEL TYPE')
+	    clf1=train.crossvalidation(traininginput, trainingoutput, clf6, slidwindow, gamma=gammavalue)
+	    print('')
+	    print('')
+	    clf2 = svm.SVC(kernel='poly', C=c, cache_size=4000)
+	    print('POLYNOMIAL KERNEL TYPE')
+	    clf3=train.crossvalidation(traininginput, trainingoutput, clf2, slidwindow, gamma=gammavalue)
+	    print('')
+	    print('')
+	    clf4 = svm.SVC(kernel='sigmoid', C=c, cache_size=4000)
+	    print('SIGMOID KERNEL TYPE')
+	    clf5=train.crossvalidation(traininginput, trainingoutput, clf4, slidwindow, gamma=gammavalue)
+	    print('')
+	    print('')	
 
 ################################################################################
-### Train the SVM (no cross val)
+### SAVE THE TRAINED MODEL
 ################################################################################
-	#clf = svm.SVC(kernel='linear', C=1)
-	#trial=train.test_classifier(traininginput, trainingoutput, clf, 0.2, 0.80, slidwindow) 
-
-################################################################################
-### Training the SVM with 5 cross-validation datasets
-################################################################################
-	clf0 = svm.SVC(kernel='linear', C=c, cache_size=3000)
-	print('LINEAR KERNEL TYPE')
-	clf=train.crossvalidation(traininginput, trainingoutput, clf0, slidwindow)
-	print('')
-	print('')
-################################################################################
-### SAVE THE BEST TRAINED MODEL
-################################################################################
-#filename = 'finalized_model1.pkl'
-#pickle.dump(clf, open(filename, 'wb'))
-#or use joblib.dump(clf, filename)
+	#filename=open('finalized_model_' + str(slidwindow) + '.pkl','wb') 
+	#filename = 'finalized_model1.pkl'
+	#pickle.dump(clf, open('finalized_model_' + str(slidwindow) + '_C'+str(c)+'.pkl', 'wb'))
+	#or use joblib.dump(clf, filename)
 
 ################################################################################
 ### LOAD THE MODEL 
