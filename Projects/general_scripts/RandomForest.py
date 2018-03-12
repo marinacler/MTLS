@@ -23,11 +23,11 @@ traininginput, trainingoutput = prs.input_for_training(parsed_dictionary_trainin
 ################################################################################
 ### Training the SVM with 5 cross-validation
 ################################################################################
-clf0 = svm.SVC(kernel='linear', C=c, cache_size=7000)
-print('LINEAR KERNEL TYPE')
-clf=train.crossvalidation(traininginput, trainingoutput, clf0, slidwindow)
-print('')
-print('')
+#clf0 = svm.SVC(kernel='linear', C=c, cache_size=7000)
+#print('LINEAR KERNEL TYPE')
+#clf=train.crossvalidation(traininginput, trainingoutput, clf0, slidwindow)
+#print('')
+#print('')
 
 rf0=RandomForestRegressor(n_estimators=1000, random_state=42)
 print('RANDOM FOREST')

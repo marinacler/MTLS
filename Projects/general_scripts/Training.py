@@ -5,7 +5,6 @@ from sklearn import svm
 from sklearn.svm import SVC
 from datetime import datetime
 import pickle
-#from sklearn.externals import joblib
 
 ################################################################################
 ### Getting the input for training the SVM
@@ -17,14 +16,15 @@ parsed_dictionary_training=prs.parse_fasta_topology('../../datasets/membrane-bet
 print('FULL DATASET')
 
 
-#listcvalues=[0.5,1,10,100]
-for m in range(9,50,2):#listcvalues:
-	c=1
-	print('Sliding window equal to: ',m)
-	slidwindow=m
+listcvalues=[0.6,0.8,0.9,1]
+for m in listcvalues:
+	c=m
+	slidwindow=35
+	print('C value equal to: ',m)
+	
 #for slidwindow in range(5,50,2):
 	traininginput, trainingoutput = prs.input_for_training(parsed_dictionary_training,slidwindow)
-	if m>1: #value in range(-10,0):
+	if m>0: #value in range(-10,0):
 	    #gammavalue=10**value
 	    #print('GAMMA VARIABLE EQUAL TO: ',gammavalue)
 ################################################################################
@@ -60,10 +60,8 @@ for m in range(9,50,2):#listcvalues:
 ################################################################################
 ### Saving the trained model
 ################################################################################
-    filename=open('./trained_models/finalized_model_' + str(slidwindow) + '.pkl','wb') 
-	#filename = 'finalized_model1.pkl'
-	#pickle.dump(clf, filename)
-	#or use joblib.dump(clf, filename)
+	    filename=open('./trained_models/Last_model_' + str(slidwindow) +'_C'+str(c)+'.pkl','wb')
+	    pickle.dump(clf,filename)
 
 end_time = datetime.now()
 print('Total Running Time: {}'.format(end_time - start_time))

@@ -49,17 +49,17 @@ def crossvalidation(X,y, clf,slidwindow):
     target_names = ['Class 0 == globular', 'Class 1 == beta barrel']
     #CONFUSION MATRIX
     cnf_matrix = confusion_matrix(y, predictions)
-    fig=plt.figure()
+    #fig=plt.figure()
     plot_confusion_matrix(cnf_matrix, classes=target_names,
                       title='Confusion matrix, without normalization')
-    plt.show()
+    #plt.show()
     #plt.close(fig)
     # NORMALIZED CONFUSION MATRIX
-    fignorm=plt.figure()
+    #fignorm=plt.figure()
     plot_confusion_matrix(cnf_matrix, classes=target_names, normalize=True,
                       title='Normalized confusion matrix')
-    plt.show()
-    plt.close(fignorm)
+    #plt.show()
+    #plt.close(fignorm)
     main_metrics=sklearn.metrics.classification_report(y, predictions, target_names=target_names)
     print (main_metrics)
     scores = cross_val_score(clf, X, y, cv=5, n_jobs=-1)
