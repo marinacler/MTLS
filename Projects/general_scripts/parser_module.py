@@ -1,4 +1,5 @@
 from collections import OrderedDict
+import os
 
 ################################################################################
 ### Defining the binary code for the aa residues
@@ -106,7 +107,43 @@ def input_for_training(dictionary,slidwindow):
 	return traininginput, trainingoutput
 
 ################################################################################
-### Creating input vectors for the testing the predictor.
+### Creating input vectors for the SVM using a predefined sliding window.
+### The input vectors will contain evol. info (from PSSM, from PSI-BLAST)
+### The input dictionary should have been parsed first
+################################################################################
+def input_for_training_pssm(dictionary,slidwindow):
+    traininginput=[]
+    trainingoutput=[]
+    for proteins in dictionary.keys():
+        if os.path.isfile('../../datasets/fasta_psi/pssm/'+proteins+'.fasta.pssm'):
+            #print('Running: ', proteins,'.fasta.pssm')
+            filehandle= open('../../datasets/fasta_psi/pssm/'+proteins+'.fasta.pssm', 'r')
+            text=filehandle.read().splitlines()
+            filehandle.close()
+            flankingseq= [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            flankinglist=[]
+            for i in range(int(slidwindow/2)):
+                flankinglist=[flankingseq]+flankinglist
+            for lineindex in range(3,(len(text)-6)):
+                elements=text[lineindex].split()
+                flankinglist=flankinglist+[(list(elements[22:-2]))]
+            for i in range(int(slidwindow/2)):
+                flankinglist=flankinglist+[flankingseq]
+            #Normalization
+            for position in flankinglist:
+                for number in range (0, len(position)):
+                    position[number] = int(position[number])/100
+            #Extract topology
+            features=dictionary.get(proteins)[1]
+            for j in range(int(slidwindow/2),(len(flankinglist)-int(slidwindow/2))):
+                slidingsequence=flankinglist[(j-int(slidwindow/2)):(j+int(slidwindow/2)+1)]
+                flat_list = [item for sublist in slidingsequence for item in sublist]
+                traininginput.append(flat_list)
+                trainingoutput.append(features[j-int(slidwindow/2)])
+    return traininginput, trainingoutput
+
+################################################################################
+### Creating input vectors for the using the predictor.
 ### The input dictionary should have been parsed first
 ################################################################################
 def input_for_testing(dictionary,slidwindow):

@@ -14,7 +14,3 @@ done
 echo "PSI-BLAST run is complete"
 echo "Ending time: $(date)"
 
-#All the files have been created in the folder datasets so with the following steps I move them to output/psiblast_output
-#cd ~/project_course/projects/datasets/fasta_seqs/
-#mv *.psiblast ../../output/psiblast_out_50
-#mv *.pssm ../../output/psiblast_out_50 
