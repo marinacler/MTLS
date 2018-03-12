@@ -8,7 +8,7 @@ import pickle
 #from sklearn.externals import joblib
 
 ################################################################################
-### GET INPUT FOR TRAINING THE SVM
+### Getting the input for training the SVM
 ################################################################################
 start_time = datetime.now()
 print('Model Training Program is running...')
@@ -20,22 +20,21 @@ print('FULL DATASET')
 #listcvalues=[0.5,1,10,100]
 for m in range(9,50,2):#listcvalues:
 	c=1
-	print('SLIDWINDOW VARIABLE EQUAL TO: ',m)
+	print('Sliding window equal to: ',m)
 	slidwindow=m
 #for slidwindow in range(5,50,2):
 	traininginput, trainingoutput = prs.input_for_training(parsed_dictionary_training,slidwindow)
-	
 	if m>1: #value in range(-10,0):
 	    #gammavalue=10**value
 	    #print('GAMMA VARIABLE EQUAL TO: ',gammavalue)
 ################################################################################
-### TRAINING THE SVM (NO CROSS VAL) // not used anymore
+### Training the SVM (no cross-val) // not used anymore
 ################################################################################
         #clf = svm.SVC(kernel='linear', C=1)
         #trial=train.test_classifier(traininginput, trainingoutput, clf, 0.2, 0.80, slidwindow) 
 
 ################################################################################
-### TRAINING THE SVM WITH 5 CROSS-VALIDATION
+### Training the SVM with 5 cross-validation
 ################################################################################
 	    clf0 = svm.SVC(kernel='linear', C=c, cache_size=7000)
 	    print('LINEAR KERNEL TYPE')
@@ -59,11 +58,11 @@ for m in range(9,50,2):#listcvalues:
 	    #print('')
 
 ################################################################################
-### SAVE THE TRAINED MODEL
+### Saving the trained model
 ################################################################################
-	filename=open('./trained_models/finalized_model_' + str(slidwindow) + '.pkl','wb') 
+    filename=open('./trained_models/finalized_model_' + str(slidwindow) + '.pkl','wb') 
 	#filename = 'finalized_model1.pkl'
-	#pickle.dump(clf, open('finalized_model_' + str(slidwindow) + '_C'+str(c)+'.pkl', 'wb'))
+	#pickle.dump(clf, filename)
 	#or use joblib.dump(clf, filename)
 
 end_time = datetime.now()

@@ -5,6 +5,7 @@ from sklearn import svm
 from sklearn.svm import SVC
 from datetime import datetime
 import pickle
+
 ################################################################################
 ### Get input for training the SVM
 ################################################################################

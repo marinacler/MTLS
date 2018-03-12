@@ -13,7 +13,7 @@ import numpy as np
 import itertools
 
 ################################################################################
-### TRAINING THE SVM (NO CROSS VAL) // not used anymore
+### Training the SVM (no cross-val) // not used anymore
 ################################################################################
 def test_classifier(X, y, trial, test_size, train_size,slidwindow):
     X_train, X_test, y_train, y_test = model_selection.train_test_split(X, y, test_size=test_size, train_size=train_size)   
@@ -40,7 +40,7 @@ def test_classifier(X, y, trial, test_size, train_size,slidwindow):
     return (trial)
 
 ################################################################################
-### TRAINING THE SVM WITH 5 CROSS-VALIDATION
+### Training the SVM with 5 cross-validation
 ################################################################################
 def crossvalidation(X,y, clf,slidwindow):   
     print('Results for sliding window:',slidwindow)
@@ -69,7 +69,7 @@ def crossvalidation(X,y, clf,slidwindow):
     return (clf)
 
 ################################################################################
-### FUNCTION FOR PLOTTING THE CONFUSION MATRIX
+### Function for plotting the confusion matrix
 ################################################################################
 #From sklearn:
 #http://scikit-learn.org/stable/auto_examples/model_selection/plot_confusion_matrix.html#sphx-glr-auto-examples-model-selection-plot-confusion-matrix-py

@@ -1,7 +1,6 @@
 ################################################################################
 ### Transforming the dataset in fasta format (individual files)
 ################################################################################
-
 from collections import OrderedDict
 
 filehandle=open('../../datasets/membrane-beta_2state.3line.txt','r') # ('../datasets/example.txt')
@@ -17,7 +16,7 @@ for line in text:
         x=x+1
 for proteins in data.keys():
 	name=proteins[1:]# proteins.replace('>','')
-	with open('../../datasets/fasta_psi/%r.fasta' %name, 'w+') as fasta:
+	with open('../../datasets/fasta_psi/'+name+'.fasta', 'w+') as fasta:
 		sequence=str(data.get(proteins))
 		fasta.write(proteins+'\n' + sequence +'\n')
 print('Transformation in fasta format completed. Document safed in datasets/fasta_psi folder')

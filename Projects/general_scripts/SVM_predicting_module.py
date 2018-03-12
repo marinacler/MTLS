@@ -2,7 +2,7 @@ import parser_module as prs
 import pickle
 
 ################################################################################
-### LOAD THE (BEST FOUND) MODEL 
+### Loading the (best found) model
 ################################################################################
 def Loading():
     loaded_model = pickle.load(open('./trained_models/finalized_model_35_C0.8.pkl','rb'))
@@ -11,7 +11,7 @@ def Loading():
     return loaded_model
 
 ################################################################################
-### PARSING THE FILE TO PREDICT 
+### Parsing the file to predict 
 ################################################################################
 def PredictionParser(filetopredict,loaded_model):
     slidwindow=35 #Because the best saved model has this sliding window
@@ -22,7 +22,7 @@ def PredictionParser(filetopredict,loaded_model):
     return dictionary_prediction, prediction
 
 ################################################################################
-### SAVING THE PREDICTION
+### Saving the prediction
 ################################################################################
 def Saveprediction(dictionary,prediction,file_name): 
     filename=open(file_name+'_prediction.txt','w') 
