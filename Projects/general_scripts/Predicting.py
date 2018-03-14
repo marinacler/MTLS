@@ -14,7 +14,7 @@ loaded_model=prdc.Loading()
 ### Predicting topology from another fasta file
 ################################################################################
 # WRITE HERE THE FASTA FILE FOR PREDICTING IF YOU WANT TO USE ANOTHER ONE:
-filetopredict='examplefortesting.txt' # ('membrane-beta_3state.3line.FASTA.txt')
+filetopredict='Filtered_BetaBarrelDataset_fasta.txt'
 dictionary_prediction,prediction=prdc.PredictionParser(filetopredict,loaded_model)
 
 ################################################################################

@@ -24,7 +24,7 @@ for m in listcvalues:
 	
 #for slidwindow in range(5,50,2):
 	traininginput, trainingoutput = prs.input_for_training(parsed_dictionary_training,slidwindow)
-	if m>0: #value in range(-10,0):
+	if m>0: #for value in range(-10,0):
 	    #gammavalue=10**value
 	    #print('GAMMA VARIABLE EQUAL TO: ',gammavalue)
 ################################################################################
