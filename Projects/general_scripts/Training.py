@@ -12,21 +12,21 @@ import pickle
 start_time = datetime.now()
 print('Model Training Program is running...')
 parsed_dictionary_training=prs.parse_fasta_topology('../../datasets/membrane-beta_2state.3line.txt') #('../../datasets/example.txt')
-# ('../../datasets/membrane-beta_2state.3line.txt')
 print('FULL DATASET')
 
-
 listcvalues=[0.6,0.8,0.9,1]
-for m in listcvalues:
-	c=m
+for m in listcvalues: #[x * 0.1 for x in range(1, 40)]
+	c=m #c=x
+	#for slidwindow in range(3,50,2):
 	slidwindow=35
 	print('C value equal to: ',m)
 	
 #for slidwindow in range(5,50,2):
 	traininginput, trainingoutput = prs.input_for_training(parsed_dictionary_training,slidwindow)
-	if m>0: #for value in range(-10,0):
+	if slidwindow>0: #for value in range(-10,0):
 	    #gammavalue=10**value
 	    #print('GAMMA VARIABLE EQUAL TO: ',gammavalue)
+
 ################################################################################
 ### Training the SVM (no cross-val) // not used anymore
 ################################################################################
@@ -60,7 +60,8 @@ for m in listcvalues:
 ################################################################################
 ### Saving the trained model
 ################################################################################
-	    filename=open('./trained_models/Last_model_' + str(slidwindow) +'_C'+str(c)+'.pkl','wb')
+	    filename=open('./trained_models/Last_model_' + str(slidwindow) +'_C'+str(c)+'.pkl','wb')  
+	    #('./trained_models/Last_model_' + str(slidwindow) +'_C'+str(c)+'_Gamma'+str(gammavalue)+'.pkl','wb')
 	    pickle.dump(clf,filename)
 
 end_time = datetime.now()
