@@ -36,7 +36,7 @@
 *Predicted topology*
 
 - Predicting_PSSM.py is a 2-state beta barrel predictor with evolutionary information added (extracted from the information given by a PSI-BLAST run using Uniref90).The SVM here was trained using multiple sequence information. You can run it directly, as the example for doing the prediction fullfills the requirements for the model to work.
-  - Input format: FASTA file. In addition, a PSI-BLAST run should be done previously for every single protein contained in the input FASTA file. Each output PSSM needs to be placed in datasets -> fasta_psi -> pssm and named as follows: proteinID.fasta.pssm, being the proteinID the same exact name as the one in the FASTa file. 
+  - Input format: FASTA file. In addition, a PSI-BLAST run should be done previously for every single protein contained in the input FASTA file. Each output PSSM needs to be placed in datasets -> fasta_psi -> pssm and named as follows: proteinID.fasta.pssm, being the proteinID the same exact name as the one in the FASTA file. 
   - Output format:
   
 *ID*
