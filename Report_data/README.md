@@ -1,3 +1,3 @@
 Report_data README
 
-Doc files containing the performance based on different parameters when training different machine learning methods.
+Doc files (raw data) containing the performance based on different parameters when training different machine learning methods.
